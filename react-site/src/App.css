@@ -1,0 +1,27 @@
+/*
+#106378
+ */
+.top-container{
+  height: 1000px;
+  background: url("img/index02.jpg") 0 -50px no-repeat;
+  background-attachment: fixed;
+
+}
+
+
+.img-index{
+  width: 100%;
+  position: relative;
+  bottom: 0;
+
+}
+
+#page-container{
+  height: 4000px;
+}
+
+.btn-join{
+  position: relative;
+  top: -260px;
+  left: calc(50% - 100px/2);
+}
