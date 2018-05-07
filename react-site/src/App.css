@@ -1,6 +1,11 @@
 /*
 #175667
  */
+
+body{
+  font-size: 0.9rem;
+}
+
 .top-container{
   height: 1000px;
   background: url("img/index02.jpg") 0 -50px no-repeat;
@@ -26,7 +31,28 @@
   left: calc(50% - 100px/2);
 }
 
-.row-test{
-  height: 500px;
+.row-etapes{
+  padding: 100px 0;
   background: #175667;
 }
+
+.forme-hexa{
+  height: 120px;
+}
+
+.border-bottom{
+  margin-bottom: 3rem;
+}
+
+.step-h4{
+  background: #175667;
+  position: relative;
+  top: 16px;
+  width: 110px;
+  margin: 0 auto;
+}
+
+.border-conteneur{
+  padding: 0 2.5rem;
+}
+
