@@ -18,7 +18,10 @@ class App extends Component {
             </div>
         </header>
         <div className="container-fluid" id="page-container">
-          </div>
+            <div className="row row-test">
+
+            </div>
+        </div>
         </div>
     );
   }
