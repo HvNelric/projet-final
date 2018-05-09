@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css'
-import index01 from './img/index01.png';
+import index01 from './img/index-violet.png';
 import recherche from './img/recherche.svg';
 import chat from './img/chat.svg';
 import connect from './img/connect.svg';
@@ -15,7 +15,7 @@ class App extends Component {
             <div className="container-fluid">
                 <div className="row top-container">
                     <img src={index01} alt="" className="img-index"/>
-                    <button className="btn btn-info btn-join">Inscrivez-vous</button>
+                    <button className="btn btn-join">Inscrivez-vous</button>
                 </div>
             </div>
         </header>
