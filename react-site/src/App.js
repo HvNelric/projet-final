@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './App.css'
+
+//pages
+import Inscription from './Inscription';
+// images
 import index01 from './img/index-violet.png';
 import recherche from './img/recherche.svg';
 import chat from './img/chat.svg';
@@ -24,7 +28,7 @@ class App extends Component {
                     </div>
                 </div>
             </header>
-            <div className="container-fluid" id="page-container">
+            <div className="container-fluid" id="page-container"> /** PAGE CONTAINER **/
                 <div className="row row-etapes">
                     <div className="container">
                         <div className="row">
@@ -61,8 +65,10 @@ class App extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+                <Inscription/>
+            </div> /* /PAGE CONTAINER */
         </div>
+
     );
   }
 }

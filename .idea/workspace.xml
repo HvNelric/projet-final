@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f0513ca-caf9-43c5-bd90-fb83de1d411f" name="Default" comment="10 mai">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Elric.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-site/src/Inscription.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-site/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-site/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-site/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-site/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-site/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-site/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-site/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-site/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-site/src/img/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/react-site/src/img/logo.svg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,11 +26,21 @@
           <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/react-site/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="783">
-                  <caret line="29" column="69" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
+                <state relative-caret-position="476">
+                  <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
+                    <element signature="e#121#166#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Inscription.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/react-site/src/Inscription.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="85">
+                  <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
@@ -47,8 +52,8 @@
           <file leaf-file-name="App.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/react-site/src/App.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="623">
-                  <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
+                <state relative-caret-position="-40">
+                  <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -56,6 +61,13 @@
         </leaf>
       </split-second>
     </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,6 +80,7 @@
       <list>
         <option value="$PROJECT_DIR$/react-site/src/App.css" />
         <option value="$PROJECT_DIR$/react-site/package.json" />
+        <option value="$PROJECT_DIR$/react-site/src/Inscription.js" />
         <option value="$PROJECT_DIR$/react-site/src/App.js" />
       </list>
     </option>
@@ -96,22 +109,21 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="projet-final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projet-final" type="462c0819:PsiDirectoryNode" />
+              <item name="projethexago" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projethexago" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="projet-final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projet-final" type="462c0819:PsiDirectoryNode" />
+              <item name="projethexago" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projethexago" type="462c0819:PsiDirectoryNode" />
               <item name="react-site" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="projet-final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projet-final" type="462c0819:PsiDirectoryNode" />
+              <item name="projethexago" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projethexago" type="462c0819:PsiDirectoryNode" />
               <item name="react-site" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -119,10 +131,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -152,11 +166,12 @@
       <workItem from="1525679128357" duration="1247000" />
       <workItem from="1525898966285" duration="5894000" />
       <workItem from="1525906116379" duration="322000" />
+      <workItem from="1525948994301" duration="1998000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7463000" />
+    <option name="totallyTimeSpent" value="9461000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -169,16 +184,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1843" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49931034" visible="true" weight="0.09584487" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49931034" visible="true" weight="0.09584487" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32893288" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.500277" side_tool="true" weight="0.20242023" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.16171618" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.5006896" side_tool="true" weight="0.09584487" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.499723" visible="true" weight="0.20242023" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.499723" visible="true" weight="0.20242023" />
       <window_info id="Favorites" order="2" sideWeight="0.5006896" side_tool="true" weight="0.09584487" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -204,10 +218,29 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/react-site/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="45" lean-forward="true" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#121#166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-site/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="17" lean-forward="true" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-site/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="15" column="51" lean-forward="true" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#121#166#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -225,14 +258,15 @@
           <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#121#166#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/react-site/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
+        <state relative-caret-position="-40">
+          <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -243,12 +277,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/react-site/src/Inscription.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-site/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/react-site/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="29" column="69" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
+        <state relative-caret-position="476">
+          <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#121#166#0" expanded="true" />
           </folding>
         </state>
       </provider>
