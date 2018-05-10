@@ -1,0 +1,13 @@
+/**** Users ****/
+.users-index{
+    background: var(--vio2);
+    padding: 5rem 0;
+}
+
+.user-img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 0.3rem;
+    background: var(--bg1);
+}
+

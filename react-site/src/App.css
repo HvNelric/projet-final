@@ -12,8 +12,52 @@
   --vio5: rgb(185,59,193);
   --blue1: rgb(32,176,231);
   --blue2: rgb(186,202,233);
+  --bg1: #f1f1f1;
 }
 
+h1, h2, h3, h3, h4, h5{
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+h5{
+  font-size: 1.9em;
+}
+
+h4{
+  font-size: 2.1em;
+}
+
+h3{
+  font-size: 2.3em;
+}
+
+h2{
+  font-size: 2.5em;
+}
+
+p{
+  font-family: 'Merriweather', serif;
+  font-size: 1em !important;
+}
+
+.my-link{
+  color: var(--btn);
+}
+
+.my-link:hover{
+  color: var(--hover);
+}
+
+.my-btn{
+  background: var(--btn) !important;
+  border-color: var(--btn) !important;
+  color: #fff;
+}
+
+.my-btn:hover{
+  background: var(--hover) !important;
+  color: #fff;
+}
 
 /**************** NAV ********************/
 .my-navbar{
@@ -42,9 +86,9 @@
   color: var(--blue1);
 }
 
-/**************/
-/**** MAIN ****/
-/**************/
+/**************************************************************/
+/**** MAIN ***************************************************/
+/************************************************************/
 body{
   font-size: 0.9rem;
 }
@@ -53,7 +97,6 @@ body{
   height: 1000px;
   background: url("img/index02-violet.jpg") 0 -50px no-repeat;
   background-attachment: fixed;
-
 }
 
 .img-index{
@@ -66,17 +109,31 @@ body{
   height: 4000px;
 }
 
+/**** Btn landing page ***/
+.btns-container{
+  width: 11rem;
+  padding: 1.5rem 0;
+  background: rgba(0,0,0,0.3);
+  border-radius: 5px;
+  position: relative;
+  top: -28rem;
+  left: calc(50% - 12rem/2);
+}
+
 .btn-join{
   background: var(--btn);
   color: #fff;
-  position: relative;
-  top: -380px;
-  left: calc(50% - 100px/2);
 }
 
 .btn-join:hover{
   background: var(--hover);
   color: #fff;
+}
+
+.for-border-bottom{
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  /**width: 8rem;
+  margin: 0 auto;**/
 }
 
 /**** Etapes ****/
