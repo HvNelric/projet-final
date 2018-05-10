@@ -11,6 +11,38 @@ span {
 	font-size: 50px;
 }
 
+
+
+									/*HISTOIRE*/
+
+#histoire {
+	background: #f2f2f2;
+	padding-top: 60px;
+	padding-bottom: 200px;
+}
+
+#histoire img{
+	height: 250px;
+}
+
+.card-body{
+	background: white;
+	
+}
+
+.font-30 {
+    font-size: 30px;
+    font-family: 'Black Han Sans', sans-serif;
+    color: #666666
+   
+    
+}
+
+#histoire img{
+	background: #f2ebcc;
+}
+
+
 						/*destinations*/
 
 #groupe {
@@ -27,6 +59,17 @@ span {
 .card-body{
 	background: white;
 	
+}
+					      /*COLLEGUE*/
+
+#collegue {
+	background: ;
+	padding-top : 50px;
+	padding-bottom: 100px;
+}
+
+#collegue img{
+	height: 250px;
 }
 
 							/*groupe*/
