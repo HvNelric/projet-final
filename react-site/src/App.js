@@ -7,19 +7,24 @@ import connect from './img/connect.svg';
 import NavbarMod from './NavbarMod';
 
 class App extends Component {
-  render() {
+
+  render(){
     return (
         <div>
-        <header>
-            <NavbarMod />
-            <div className="container-fluid">
-                <div className="row top-container">
-                    <img src={index01} alt="" className="img-index"/>
-                    <button className="btn btn-join">Inscrivez-vous</button>
+            <header>
+                <NavbarMod />
+                <div className="container-fluid">
+                    <div className="row top-container">
+                        <img src={index01} alt="" className="img-index"/>
+                        <div className="btns-container">
+                            <a href="#" className="btn btn-join">Inscrivez-vous</a>
+                            <p>OU</p>
+                            <a className="btn btn-join" href="#">Connectez-vous</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </header>
-        <div className="container-fluid" id="page-container">
+            </header>
+            <div className="container-fluid" id="page-container">
                 <div className="row row-etapes">
                     <div className="container">
                         <div className="row">
@@ -56,7 +61,7 @@ class App extends Component {
                         </div>
                     </div>
                 </div>
-        </div>
+            </div>
         </div>
     );
   }
