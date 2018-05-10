@@ -5,9 +5,11 @@
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "svgr": "^1.9.1"
   },
   "scripts": {
+    "build:svg": "svgr -d svg/ components/",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

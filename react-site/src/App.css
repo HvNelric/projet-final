@@ -2,6 +2,19 @@
 #175667
 #292255
  */
+/******* Couleur ********/
+:root{
+  --btn: rgba(41,34,85,1);
+  --hover: rgb(59,35,106);
+  --vio2: rgb(69,40,125);
+  --vio3: rgb(116,26,152);
+  --vio4: rgb(145,37,164);
+  --vio5: rgb(185,59,193);
+  --blue1: rgb(32,176,231);
+  --blue2: rgb(186,202,233);
+}
+
+
 /**************** NAV ********************/
 .my-navbar{
   background: #292255 !important;
@@ -13,7 +26,20 @@
 }
 
 .my-navlink:hover {
-  color: rgba(200,200,200,1) !important;
+  color: var(--blue1) !important;
+}
+
+.my-input{
+  height: 1.5rem;
+}
+
+.btn-cnx{
+  padding: 0 0.5rem;
+}
+
+.btn-cnx:hover{
+  background: none !important;
+  color: var(--blue1);
 }
 
 /**************/
@@ -41,7 +67,7 @@ body{
 }
 
 .btn-join{
-  background: rgba(41,34,85,1);
+  background: var(--btn);
   color: #fff;
   position: relative;
   top: -380px;
@@ -49,9 +75,11 @@ body{
 }
 
 .btn-join:hover{
-  background: rgba(41,34,85,0.4);
+  background: var(--hover);
+  color: #fff;
 }
 
+/**** Etapes ****/
 .row-etapes{
   padding: 100px 0;
   background: #292255;
