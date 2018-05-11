@@ -1,0 +1,14 @@
+.howto-index{
+    padding: 5rem 0;
+}
+
+.howto-left{
+    background: var(--vio2);
+    padding: 2rem;
+}
+
+.howto-right{
+    padding: 2rem;
+    background: var(--bg2);
+    color: var(--btn);
+}

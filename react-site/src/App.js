@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-
 //pages
 import Inscription from './pages/Inscription';
 import DestinationIndex from './pages/DestinationIndex';
 import UsersIndex from './pages/UsersIndex';
+import GroupsIndex from './pages/GroupsIndex';
+import HowtoIndex from './pages/HowtoIndex';
+import Footer from './pages/Footer';
 // images
 import index01 from './img/index-violet.png';
 import recherche from './img/recherche.svg';
@@ -32,7 +34,7 @@ class App extends Component {
                     </div>
                 </div>
             </header>
-            <div className="container-fluid p-0" id="page-container"> /** PAGE CONTAINER **/
+            <div className="container-fluid p-0" id="page-container"> {/** PAGE CONTAINER **/}
                 <div className="row row-etapes">
                     <div className="container">
                         <div className="row">
@@ -71,7 +73,10 @@ class App extends Component {
                 </div>
                 <DestinationIndex />
                 <UsersIndex />
-            </div> /* /PAGE CONTAINER */
+                <GroupsIndex />
+                <HowtoIndex />
+            </div> {/* /PAGE CONTAINER */}
+            <Footer />
         </div>
 
     );

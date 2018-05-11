@@ -19,66 +19,66 @@ class DestinationIndex extends Component{
                         <div className="col-6 col-md-4">
                             <div className="card my-card"> {/* Card */}
                                 <img className="card-img-top" src={image01} alt="destination" ></img>
-                                <div className="card-body">
+                                <div className="card-body clearfix">
                                     <h5 className="card-title">Nom destination</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make
                                         up the bulk of the card's content.</p>
-                                    <a href="#" className="btn my-btn">plus de détails</a>
+                                    <a href="#" className="btn float-right my-btn">plus de détails</a>
                                 </div>
                             </div> {/* /Card */}
                         </div>
                        <div className="col-6 col-md-4">
                            <div className="card my-card"> {/* Card */}
                                <img className="card-img-top" src={image01} alt="destination" ></img>
-                               <div className="card-body">
+                               <div className="card-body clearfix">
                                    <h5 className="card-title">Nom destination</h5>
                                    <p className="card-text">Some quick example text to build on the card title and make
                                        up the bulk of the card's content.</p>
-                                   <a href="#" className="btn my-btn">plus de détails</a>
+                                   <a href="#" className="btn float-right my-btn">plus de détails</a>
                                </div>
                            </div> {/* /Card */}
                        </div>
                        <div className="col-6 col-md-4">
                            <div className="card my-card"> {/* Card */}
                                <img className="card-img-top" src={image01} alt="destination" ></img>
-                               <div className="card-body">
+                               <div className="card-body clearfix">
                                    <h5 className="card-title">Nom destination</h5>
                                    <p className="card-text">Some quick example text to build on the card title and make
                                        up the bulk of the card's content.</p>
-                                   <a href="#" className="btn my-btn">plus de détails</a>
+                                   <a href="#" className="btn float-right my-btn">plus de détails</a>
                                </div>
                            </div> {/* /Card */}
                        </div>
                        <div className="col-6 col-md-4">
                            <div className="card my-card"> {/* Card */}
                                <img className="card-img-top" src={image01} alt="destination" ></img>
-                               <div className="card-body">
+                               <div className="card-body clearfix">
                                    <h5 className="card-title">Nom destination</h5>
                                    <p className="card-text">Some quick example text to build on the card title and make
                                        up the bulk of the card's content.</p>
-                                   <a href="#" className="btn my-btn">plus de détails</a>
+                                   <a href="#" className="btn float-right my-btn">plus de détails</a>
                                </div>
                            </div> {/* /Card */}
                        </div>
                        <div className="col-6 col-md-4">
                            <div className="card my-card"> {/* Card */}
                                <img className="card-img-top" src={image01} alt="destination" ></img>
-                               <div className="card-body">
+                               <div className="card-body clearfix">
                                    <h5 className="card-title">Nom destination</h5>
                                    <p className="card-text">Some quick example text to build on the card title and make
                                        up the bulk of the card's content.</p>
-                                   <a href="#" className="btn my-btn">plus de détails</a>
+                                   <a href="#" className="btn float-right my-btn">plus de détails</a>
                                </div>
                            </div> {/* /Card */}
                        </div>
                        <div className="col-6 col-md-4">
                            <div className="card my-card"> {/* Card */}
                                <img className="card-img-top" src={image01} alt="destination" ></img>
-                               <div className="card-body">
+                               <div className="card-body clearfix">
                                    <h5 className="card-title">Nom destination</h5>
                                    <p className="card-text">Some quick example text to build on the card title and make
                                        up the bulk of the card's content.</p>
-                                   <a href="#" className="btn my-btn">plus de détails</a>
+                                   <a href="#" className="btn float-right my-btn">plus de détails</a>
                                </div>
                            </div> {/* /Card */}
                        </div>
