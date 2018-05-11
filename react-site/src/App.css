@@ -13,6 +13,7 @@
   --blue1: rgb(32,176,231);
   --blue2: rgb(186,202,233);
   --bg1: #f1f1f1;
+  --bg2: rgb(252,250,245);
 }
 
 h1, h2, h3, h3, h4, h5{
@@ -20,7 +21,7 @@ h1, h2, h3, h3, h4, h5{
 }
 
 h5{
-  font-size: 1.9em;
+  font-size: 1.5em;
 }
 
 h4{
@@ -37,7 +38,7 @@ h2{
 
 p{
   font-family: 'Merriweather', serif;
-  font-size: 1em !important;
+  font-size: 0.9em !important;
 }
 
 .my-link{
@@ -103,10 +104,6 @@ body{
   width: 100%;
   position: relative;
   bottom: 0;
-}
-
-#page-container{
-  height: 4000px;
 }
 
 /**** Btn landing page ***/
