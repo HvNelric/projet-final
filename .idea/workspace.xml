@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f0513ca-caf9-43c5-bd90-fb83de1d411f" name="Default" comment="10 mai">
-      <change afterPath="$PROJECT_DIR$/react-site/src/css/users-index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-site/src/pages/DestinationIndex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-site/src/pages/UsersIndex.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kevin/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-site/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/react-site/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-site/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-site/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-site/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-site/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-site/src/Inscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-site/src/pages/Inscription.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-site/src/NavbarMod.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-site/src/components/NavbarMod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-site/src/navbarMod.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-site/src/css/navbarMod.css" afterDir="false" />
-    </list>
+    <list default="true" id="7f0513ca-caf9-43c5-bd90-fb83de1d411f" name="Default" comment="10 mai" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -61,7 +49,7 @@
             <entry file="file://$PROJECT_DIR$/react-site/src/pages/UsersIndex.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="306">
-                  <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+                  <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                   </folding>
@@ -76,7 +64,7 @@
           <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/react-site/src/App.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
+                <state relative-caret-position="-1394">
                   <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
                 </state>
               </provider>
@@ -147,8 +135,8 @@
       <path value="$PROJECT_DIR$/react-site/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1913" />
     <option name="width" value="1843" />
     <option name="height" value="1047" />
   </component>
@@ -245,12 +233,12 @@
       <workItem from="1525679128357" duration="1247000" />
       <workItem from="1525898966285" duration="5894000" />
       <workItem from="1525906116379" duration="322000" />
-      <workItem from="1525948994301" duration="16808000" />
+      <workItem from="1525948994301" duration="16988000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24271000" />
+    <option name="totallyTimeSpent" value="24451000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -263,7 +251,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49931034" visible="true" weight="0.09114858" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32893288" />
@@ -400,13 +387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react-site/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react-site/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
@@ -429,6 +409,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/react-site/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1394">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/react-site/src/css/users-index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -439,7 +426,7 @@
     <entry file="file://$PROJECT_DIR$/react-site/src/pages/UsersIndex.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
