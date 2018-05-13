@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="7f0513ca-caf9-43c5-bd90-fb83de1d411f" name="Default" comment="10 mai" />
+=======
+    <list default="true" id="7f0513ca-caf9-43c5-bd90-fb83de1d411f" name="Default" comment="10 mai">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-site/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-site/src/App.js" afterDir="false" />
+    </list>
+>>>>>>> 45ee72e1a6112cdf4fa3a1c999830471fe7dbc97
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -19,14 +26,15 @@
     <splitter split-orientation="horizontal" split-proportion="0.62956524">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/react-site/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="434">
-                  <caret line="72" column="28" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
+                <state relative-caret-position="-351">
+                  <caret line="2" selection-start-line="2" selection-end-line="2" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                     <element signature="e#71#117#0" expanded="true" />
+<<<<<<< HEAD
                     <element signature="e#121#166#0" expanded="true" />
                   </folding>
                 </state>
@@ -52,6 +60,9 @@
                   <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
+=======
+                    <element signature="e#230#275#0" expanded="true" />
+>>>>>>> 45ee72e1a6112cdf4fa3a1c999830471fe7dbc97
                   </folding>
                 </state>
               </provider>
@@ -61,9 +72,10 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
+          <file leaf-file-name="App.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/react-site/src/App.css">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
                 <state relative-caret-position="-1394">
                   <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
                 </state>
@@ -75,6 +87,10 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="221">
                   <caret line="13" selection-start-line="13" selection-end-line="13" />
+=======
+                <state relative-caret-position="85">
+                  <caret line="98" selection-start-line="98" selection-end-line="98" />
+>>>>>>> 45ee72e1a6112cdf4fa3a1c999830471fe7dbc97
                 </state>
               </provider>
             </entry>
@@ -114,10 +130,10 @@
         <option value="$PROJECT_DIR$/react-site/src/css/destination-index.css" />
         <option value="$PROJECT_DIR$/react-site/public/index.html" />
         <option value="$PROJECT_DIR$/react-site/src/App.css" />
-        <option value="$PROJECT_DIR$/react-site/src/App.js" />
         <option value="$PROJECT_DIR$/react-site/src/pages/DestinationIndex.js" />
         <option value="$PROJECT_DIR$/react-site/src/css/users-index.css" />
         <option value="$PROJECT_DIR$/react-site/src/pages/UsersIndex.js" />
+        <option value="$PROJECT_DIR$/react-site/src/App.js" />
       </list>
     </option>
   </component>
@@ -136,7 +152,11 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="1913" />
+=======
+    <option name="x" value="-7" />
+>>>>>>> 45ee72e1a6112cdf4fa3a1c999830471fe7dbc97
     <option name="width" value="1843" />
     <option name="height" value="1047" />
   </component>
@@ -152,39 +172,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="projethexago" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projethexago" type="462c0819:PsiDirectoryNode" />
+              <item name="projet-final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projet-final" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="projethexago" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projethexago" type="462c0819:PsiDirectoryNode" />
+              <item name="projet-final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projet-final" type="462c0819:PsiDirectoryNode" />
               <item name="react-site" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projethexago" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projethexago" type="462c0819:PsiDirectoryNode" />
-              <item name="react-site" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projethexago" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projethexago" type="462c0819:PsiDirectoryNode" />
-              <item name="react-site" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projethexago" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projethexago" type="462c0819:PsiDirectoryNode" />
-              <item name="react-site" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projethexago" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projethexago" type="462c0819:PsiDirectoryNode" />
-              <item name="react-site" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -195,7 +189,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/react-site" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -233,12 +227,22 @@
       <workItem from="1525679128357" duration="1247000" />
       <workItem from="1525898966285" duration="5894000" />
       <workItem from="1525906116379" duration="322000" />
+<<<<<<< HEAD
       <workItem from="1525948994301" duration="16988000" />
+=======
+      <workItem from="1525948994301" duration="16808000" />
+      <workItem from="1525980937269" duration="309000" />
+      <workItem from="1525981452416" duration="138000" />
+>>>>>>> 45ee72e1a6112cdf4fa3a1c999830471fe7dbc97
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="24451000" />
+=======
+    <option name="totallyTimeSpent" value="24718000" />
+>>>>>>> 45ee72e1a6112cdf4fa3a1c999830471fe7dbc97
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -250,16 +254,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+=======
+    <frame x="-7" y="0" width="1843" height="1047" extended-state="0" />
+>>>>>>> 45ee72e1a6112cdf4fa3a1c999830471fe7dbc97
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49931034" visible="true" weight="0.09114858" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49931034" visible="true" weight="0.09584487" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32893288" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.500277" side_tool="true" weight="0.20242023" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.16171618" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.5006896" side_tool="true" weight="0.09584487" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.499723" visible="true" weight="0.20043573" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.499723" visible="true" weight="0.20462047" />
       <window_info id="Favorites" order="2" sideWeight="0.5006896" side_tool="true" weight="0.09584487" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -283,23 +291,55 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/react-site/src/pages/DestinationIndex.js</url>
           <line>17</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/react-site/src/App.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/react-site/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="45" lean-forward="true" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+        <state relative-caret-position="2187">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#71#117#0" expanded="true" />
-            <element signature="e#121#166#0" expanded="true" />
+            <element signature="e#230#275#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-site/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2646">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-site/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1755">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-site/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1107">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-site/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="45" lean-forward="true" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -314,11 +354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="15" column="51" lean-forward="true" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#71#117#0" expanded="true" />
-            <element signature="e#121#166#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -333,11 +368,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#71#117#0" expanded="true" />
-            <element signature="e#121#166#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -348,38 +378,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react-site/src/pages/Inscription.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/react-site/src/pages/Inscription.js" />
     <entry file="file://$PROJECT_DIR$/react-site/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/react-site/src/components/NavbarMod.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react-site/src/css/destination-index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/react-site/src/components/NavbarMod.js" />
+    <entry file="file://$PROJECT_DIR$/react-site/src/css/destination-index.css" />
     <entry file="file://$PROJECT_DIR$/react-site/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -387,13 +391,27 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/react-site/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-site/src/pages/DestinationIndex.js" />
+    <entry file="file://$PROJECT_DIR$/react-site/src/css/users-index.css" />
+    <entry file="file://$PROJECT_DIR$/react-site/src/pages/UsersIndex.js" />
+>>>>>>> 45ee72e1a6112cdf4fa3a1c999830471fe7dbc97
     <entry file="file://$PROJECT_DIR$/react-site/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="72" column="28" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
+        <state relative-caret-position="-351">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#71#117#0" expanded="true" />
+<<<<<<< HEAD
             <element signature="e#121#166#0" expanded="true" />
           </folding>
         </state>
@@ -429,6 +447,9 @@
           <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+=======
+            <element signature="e#230#275#0" expanded="true" />
+>>>>>>> 45ee72e1a6112cdf4fa3a1c999830471fe7dbc97
           </folding>
         </state>
       </provider>

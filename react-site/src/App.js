@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
+import {
+    BrowserRouter as Router,
+    Link,
+    Route,
+    Switch,
+} from 'react-router-dom';
+
 //pages
 import Inscription from './pages/Inscription';
 import DestinationIndex from './pages/DestinationIndex';
@@ -7,6 +14,9 @@ import UsersIndex from './pages/UsersIndex';
 import GroupsIndex from './pages/GroupsIndex';
 import HowtoIndex from './pages/HowtoIndex';
 import Footer from './pages/Footer';
+import Connexion from './pages/Connexion';
+//import Test from './pages/Test';
+
 // images
 import index01 from './img/index-violet.png';
 import recherche from './img/recherche.svg';
@@ -25,11 +35,19 @@ class App extends Component {
                     <div className="row top-container">
                         <img src={index01} alt="" className="img-index"/>
                         <div className="btns-container text-center">
-                            <a href="#" className="btn btn-join mb-4">Inscrivez-vous</a>
+                            <Router>
+                                <div>
+                                    <Link to="/connexion" className="btn btn-join mb-4">Connexion2</Link>
+                                    <Switch>
+                                        <Route path="/pages/" component={Connexion}/>
+                                    </Switch>
+                                </div>
+                            </Router>
+                            {/* <a href="#" className="btn btn-join mb-4">Inscrivez-vous</a> */}
                             <div className="for-border-bottom"></div>
                             <p className="text-light my-2">OU</p>
                             <div className="for-border-bottom"></div>
-                            <a className="btn btn-join mt-4" href="#">Connectez-vous</a>
+                            <a className="btn btn-join mt-4" href="">Connectez-vous</a>
                         </div>
                     </div>
                 </div>
@@ -75,6 +93,10 @@ class App extends Component {
                 <UsersIndex />
                 <GroupsIndex />
                 <HowtoIndex />
+                <div>
+
+                </div>
+                <Connexion />
             </div> {/* /PAGE CONTAINER */}
             <Footer />
         </div>
