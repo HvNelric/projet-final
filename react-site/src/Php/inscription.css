@@ -1,0 +1,27 @@
+.inscription-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inscription-form{
+    width: 50rem;
+    border-radius: 0.5rem;
+
+    background: linear-gradient(113.04725084522124deg,
+    rgba(246, 245, 245,1) 4.927083333333334%,
+    rgba(220, 220, 220,1) 97.84374999999999%);
+
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1)  ;
+    -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.1)  ;
+    -moz-box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+.inscription-form input{
+    height: 1.8rem;
+}
+
+.inscription-form label{
+    font-size: 0.9em;
+    margin-bottom: 0.2rem;
+}
