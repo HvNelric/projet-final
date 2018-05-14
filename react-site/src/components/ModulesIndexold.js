@@ -16,7 +16,6 @@ class ModulesIndex extends Component{
     render() {
         return(
             <div>
-                <Header />                
                 <div className="container-fluid p-0" id="page-container"> {/** PAGE CONTAINER **/}
                     <EtapesIndex />
                     <DestinationIndex />

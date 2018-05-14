@@ -1,19 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 
+import Routes from './routes';
 import ModulesIndex from './components/ModulesIndex';
 
 
-
-class App extends Component {
-
-  render(){
-    return (
+const App =() =>{
+    return(
         <div>
-            <ModulesIndex />
+        <BrowserRouter>
+            <Routes/>
+        </BrowserRouter>
+        
         </div>
-    );
-  }
+        
+    )
 }
 
 export default App;
+
