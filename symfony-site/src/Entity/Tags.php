@@ -26,7 +26,7 @@ class Tags
         return $this->id;
     }
 
-    public function getTag(): ?string
+    public function getTag()
     {
         return $this->tag;
     }

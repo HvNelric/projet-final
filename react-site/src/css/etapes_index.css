@@ -1,0 +1,24 @@
+.row-etapes{
+    padding: 100px 0;
+    background: #292255;
+}
+
+.forme-hexa{
+    height: 120px;
+}
+
+.border-bottom{
+    margin-bottom: 3rem;
+}
+
+.step-h4{
+    background: #292255;
+    position: relative;
+    top: 16px;
+    width: 110px;
+    margin: 0 auto;
+}
+
+.border-conteneur{
+    padding: 0 2.5rem;
+}

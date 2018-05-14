@@ -1,0 +1,41 @@
+
+.top-container{
+    height: 1000px;
+    background: url("../img/index02-violet.jpg") 0 -50px no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.img-index{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/**** Btn landing page ***/
+.btns-container{
+    width: 11rem;
+    padding: 1.5rem 0;
+    background: rgba(0,0,0,0.3);
+    border-radius: 5px;
+    position: relative;
+    top: -28rem;
+    left: calc(50% - 12rem/2);
+}
+
+.btn-join{
+    background: var(--btn);
+    color: #fff;
+}
+
+.btn-join:hover{
+    background: var(--hover);
+    color: #fff;
+}
+
+.for-border-bottom{
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    /**width: 8rem;
+    margin: 0 auto;**/
+}

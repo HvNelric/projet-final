@@ -23,12 +23,12 @@ class Groupe
     private $nb_groupe;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="datetime")
      */
     private $date_debut;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="datetime")
      */
     private $date_fin;
 
@@ -42,7 +42,7 @@ class Groupe
         return $this->id;
     }
 
-    public function getNbGroupe(): ?int
+    public function getNbGroupe()
     {
         return $this->nb_groupe;
     }
@@ -54,7 +54,7 @@ class Groupe
         return $this;
     }
 
-    public function getDateDebut(): ?\DateTimeInterface ////////////////////////////////////////////////// à voir
+    public function getDateDebut()
     {
         return $this->date_debut;
     }
@@ -66,7 +66,7 @@ class Groupe
         return $this;
     }
 
-    public function getDateFin(): ?\DateTimeInterface /////////////////////////////////////////////////////// à voir
+    public function getDateFin()
     {
         return $this->date_fin;
     }

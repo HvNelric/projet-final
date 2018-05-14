@@ -16,6 +16,10 @@
   --bg2: rgb(252,250,245);
 }
 
+body{
+  font-size: 0.9rem;
+}
+
 h1, h2, h3, h3, h4, h5{
   font-family: 'Archivo Narrow', sans-serif;
 }
@@ -86,76 +90,3 @@ p{
   background: none !important;
   color: var(--blue1);
 }
-
-/**************************************************************/
-/**** MAIN ***************************************************/
-/************************************************************/
-body{
-  font-size: 0.9rem;
-}
-
-.top-container{
-  height: 1000px;
-  background: url("img/index02-violet.jpg") 0 -50px no-repeat;
-  background-attachment: fixed;
-}
-
-.img-index{
-  width: 100%;
-  position: relative;
-  bottom: 0;
-}
-
-/**** Btn landing page ***/
-.btns-container{
-  width: 11rem;
-  padding: 1.5rem 0;
-  background: rgba(0,0,0,0.3);
-  border-radius: 5px;
-  position: relative;
-  top: -28rem;
-  left: calc(50% - 12rem/2);
-}
-
-.btn-join{
-  background: var(--btn);
-  color: #fff;
-}
-
-.btn-join:hover{
-  background: var(--hover);
-  color: #fff;
-}
-
-.for-border-bottom{
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  /**width: 8rem;
-  margin: 0 auto;**/
-}
-
-/**** Etapes ****/
-.row-etapes{
-  padding: 100px 0;
-  background: #292255;
-}
-
-.forme-hexa{
-  height: 120px;
-}
-
-.border-bottom{
-  margin-bottom: 3rem;
-}
-
-.step-h4{
-  background: #292255;
-  position: relative;
-  top: 16px;
-  width: 110px;
-  margin: 0 auto;
-}
-
-.border-conteneur{
-  padding: 0 2.5rem;
-}
-

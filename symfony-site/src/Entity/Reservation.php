@@ -17,12 +17,12 @@ class Reservation
     private $id;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="datetime")
      */
     private $date_reservation;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="datetime")
      */
     private $date_depart;
 
@@ -44,7 +44,7 @@ class Reservation
     /**
      * @ORM\Column(type="integer") ////////////////////////////////////////////////// relation à definir
      */
-    private $sejour_idsejour;
+    private $sejour_id_sejour;
 
     public function getId()
     {
@@ -113,12 +113,12 @@ class Reservation
 
     public function getSejourIdsejour()
     {
-        return $this->sejour_idsejour;
+        return $this->sejour_id_sejour;
     }
 
-    public function setSejourIdsejour(int $sejour_idsejour): self
+    public function setSejourIdSejour(int $sejour_id_sejour): self
     {
-        $this->sejour_idsejour = $sejour_idsejour;
+        $this->sejour_id_sejour = $sejour_id_sejour;
 
         return $this;
     }

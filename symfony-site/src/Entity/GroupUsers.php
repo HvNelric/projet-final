@@ -26,7 +26,7 @@ class GroupUsers
         return $this->id;
     }
 
-    public function getUserIdUser(): ?int
+    public function getUserIdUser()
     {
         return $this->user_id_user;
     }
