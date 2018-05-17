@@ -1,0 +1,49 @@
+{# register.html.twig #}
+{% extends 'layout.html.twig' %}
+
+{% block title %} Inscription {% endblock %}
+
+{% block content %}
+    <h1 class="mt-5">Inscription</h1>
+        <div class="container py-5">
+            {{ form_start(form) }}
+                <div class="form-control p-5">
+                    <div class="form-group">
+                        {{ form_row(form.email) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.plainPassword) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.prenom) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.nom) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.sexe) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.age) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.date_dispo) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.date_fin) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.activites) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.region) }}
+                    </div>
+                    <div class="form-btn-group text-right">
+                        <button type="submit" class="btn btn-info mt-4">
+                            Enregistrer
+                        </button>
+                    </div>
+                </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
