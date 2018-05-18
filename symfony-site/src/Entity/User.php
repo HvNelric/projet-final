@@ -23,16 +23,23 @@ class User implements UserInterface, \Serializable
 
     /**
      * @var ArrayCollection
-     * relation n-n entre user et appartient définie sur l'atribut user_id_user
-     * ////////////////////////////////////////////////////////////////////////////////////////////////// à définir /////@ORM\OneToMany(targetEntity="", mappedBy)
+     * @ORM\ManyToMany(targetEntity="App\Entity\Activites", inversedBy="user_activites")
+     * @ORM\JoinTable(name="user_activites")
      */
-    private $tags_id_tag;  /////////////////////////////////////////////////////////////////////////////// getters setters à definir
-
+    private $activites;
 
     /**
-     * @ORM\Column(type="string", length=20)
+     * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="App\Entity\Reservation", mappedBy="user_reservation")
      */
-    private $role = 'ROLE_USER';
+    private $reservation;
+
+    /**
+     * @var ArrayCollection
+     * @ORM\ManyToMany(targetEntity="App\Entity\Region", inversedBy="user_region")
+     * @ORM\JoinTable(name="user_region")
+     */
+    private $region;
 
     /**
      * @ORM\Column(type="string", length=255, unique=true)
@@ -42,60 +49,83 @@ class User implements UserInterface, \Serializable
     private $email;
 
     /**
+     * @ORM\Column(type="string", length=20)
+     */
+    private $role = 'ROLE_USER';
+
+    /**
+     * @var string
+     * @Assert\NotBlank(message="Le mot de passe est obligation")
+     */
+    private $plainPassword;
+
+    /**
      * @ORM\Column(type="string", length=255)
      */
     private $password;
 
     /**
      * @var string
-     * @Assert\NotBlank(message="Le mot de passe est obligatoire")
+     * @ORM\Column(type="string", length=20)
      */
-    private $plainPassword;
+    private $sexe;
 
     /**
      * @ORM\Column(type="string", length=20)
-     */
-    private $civilite;
-
-    /**
-     * @ORM\Column(type="string", length=100)
+     * Validation :
+     *  -non vide
      * @Assert\NotBlank(message="Le nom est obligatoire")
-     * @Assert\Length(max="100", maxMessage="Le prénom ne doit pas dépasser {{ limit }} caractères")
+     *  -nombre de caractères
+     * @Assert\Length(max="20", maxMessage="Le nom ne doit pas dépasser {{ limit }} caractères")
      */
     private $prenom;
 
     /**
-     * @ORM\Column(type="string", length=100)
-     * @Assert\NotBlank(message="Le nom ne doit pas dépasser {{ limit }} caractères")
+     * @ORM\Column(type="string", length=20)
      */
     private $nom;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="integer")
      */
-    private $adresse;
+    private $age;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var \DateTime
+     * @ORM\Column(type="date")
      */
-    private $cp;
+    private $date_dispo;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var \DateTime
+     * @ORM\Column(type="date")
      */
-    private $ville;
+    private $date_fin;
 
-////////////////////////////////////////////////// Getters Setters
-    public function getRole()
+    /**
+     * @var string
+     * @ORM\Column(type="string", nullable=true)
+     * Assert\Image(
+     *     minWidth = 200,
+     *     maxWidth = 400,
+     *     minHeight = 200,
+     *     maxHeight = 400,
+     *     allowLandscape = false,
+     *     allowPortrait = false,
+     *     minHeightMessage="La hauteur de l'image est de {{ height }} px, la taille doit etre comprise entre {{min_height}} px et {{max_height}} px",
+     *     maxHeightMessage="La hauteur de l'image est de {{ height }} px, la taille doit etre comprise entre {{min_width}} px et {{max_width}} px",
+     *     minWidthMessage="La largeur de l'image est de {{ width }} px, la taille doit etre comprise entre {{min_width}} px et {{max_width}} px",
+     *     maxWidthMessage="La largeur de l'image est de {{ width }} px, la taille doit etre comprise entre {{min_width}} px et {{max_width}} px"
+     *
+     * )
+     */
+    private $profil_img;
+
+    public function __construct()
     {
-        return $this->role;
-    }
-
-    public function setRole(string $role): self
-    {
-        $this->role = $role;
-
-        return $this;
+        $this->reservation = new ArrayCollection();
+        $this->activites = new ArrayCollection();
+        $this->region = new ArrayCollection();
     }
 
     public function getId()
@@ -127,25 +157,14 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
-    public function getPlainPassword()
+    public function getSexe()
     {
-        return $this->plainPassword;
+        return $this->sexe;
     }
 
-    public function setPlainPassword($plainPassword)
+    public function setSexe(string $sexe): self
     {
-        $this->plainPassword = $plainPassword;
-        return $this;
-    }
-
-    public function getCivilite()
-    {
-        return $this->civilite;
-    }
-
-    public function setCivilite(string $civilite): self
-    {
-        $this->civilite = $civilite;
+        $this->sexe = $sexe;
 
         return $this;
     }
@@ -174,63 +193,174 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
-    public function getAdresse()
+    /**
+     * @return ArrayCollection
+     */
+    public function getActivites()
     {
-        return $this->adresse;
-    }
-
-    public function setAdresse(string $adresse): self
-    {
-        $this->adresse = $adresse;
-
-        return $this;
-    }
-
-    public function getCp()
-    {
-        return $this->cp;
-    }
-
-    public function setCp(string $cp): self
-    {
-        $this->cp = $cp;
-
-        return $this;
-    }
-
-    public function getVille()
-    {
-        return $this->ville;
-    }
-
-    public function setVille(string $ville): self
-    {
-        $this->ville = $ville;
-
-        return $this;
-    }
-
-    ////////////////////////////////////////// Methodes
-
-    // Transforme l'objet en chaine de caractère normée
-    public function serialize(): string
-    {
-        return serialize(
-          [
-              $this->id,
-              $this->email,
-              $this->password,
-              $this->prenom,
-              $this->nom,
-              $this->adresse,
-              $this->cp,
-              $this->ville
-          ]
-        );
+        return $this->activites;
     }
 
     /**
-     * Transforme une chaine générée par serialize()
+     * @return ArrayCollection
+     */
+    public function getReservation()
+    {
+        return $this->reservation;
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getRegion()
+    {
+        return $this->region;
+    }
+
+    /**
+     * @param ArrayCollection $region
+     * @return User
+     */
+    public function setRegion(ArrayCollection $region) :User
+    {
+        $this->region = $region;
+        return $this;
+    }
+
+    /**
+     * @param ArrayCollection $reservation
+     * @return User
+     */
+    public function setReservation(ArrayCollection $reservation): User
+    {
+        $this->reservation = $reservation;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRole()
+    {
+        return $this->role;
+    }
+
+    /**
+     * @param string $role
+     */
+    public function setRole(string $role): self
+    {
+        $this->role = $role;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+    /**
+     * @param mixed $age
+     * @return User
+     */
+    public function setAge($age)
+    {
+        $this->age = $age;
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateDispo()
+    {
+        return $this->date_dispo;
+    }
+
+    /**
+     * @param \DateTime $date_dispo
+     * @return User
+     */
+    public function setDateDispo(\DateTime $date_dispo): User
+    {
+        $this->date_dispo = $date_dispo;
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateFin()
+    {
+        return $this->date_fin;
+    }
+
+    /**
+     * @param \DateTime $date_fin
+     * @return User
+     */
+    public function setDateFin(\DateTime $date_fin): User
+    {
+        $this->date_fin = $date_fin;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProfilImg()
+    {
+        return $this->profil_img;
+    }
+
+    /**
+     * @param string $profil_img
+     * @return User
+     */
+    public function setProfilImg($profil_img): User
+    {
+        $this->profil_img = $profil_img;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    /**
+     * @param string $plainPassword
+     * @return User
+     */
+    public function setPlainPassword(string $plainPassword): User
+    {
+        $this->plainPassword = $plainPassword;
+        return $this;
+    }
+
+    /**
+     * Transforme l'objet en chaîne de caractère normée
+     */
+    public function serialize()
+    {
+        return serialize([
+            $this->id,
+            $this->prenom,
+            $this->nom,
+            $this->email,
+            $this->password
+        ]);
+    }
+
+    /**
+     * Transforme une chaîne générée par serialize()
+     * en objet
      *
      * @param string $serialized
      */
@@ -238,43 +368,32 @@ class User implements UserInterface, \Serializable
     {
         list(
             $this->id,
-            $this->email,
-            $this->password,
             $this->prenom,
             $this->nom,
-            $this->adresse,
-            $this->cp,
-            $this->ville
+            $this->email,
+            $this->password
             ) = unserialize($serialized);
+
     }
 
-    public function eraseCredentials()
-    {
-        // TODO: Implement eraseCredentials() method.
-    }
-
-    public function getRoles()
-    {
+    public function getRoles() {
         return [$this->role];
     }
 
-    public function getUsername()
-    {
+    public function getUsername() {
         return $this->email;
     }
 
-    public function getSalt()
-    {
-        return null;
+    public function eraseCredentials() {
+
     }
 
-    public function getFullname()
-    {
-        return trim($this->prenom . ' ' . $this->nom);
+    public function getSalt() {
+        return null;
     }
 
     public function __toString()
     {
-        return $this->getFullname();
+        return $this->sexe;
     }
 }

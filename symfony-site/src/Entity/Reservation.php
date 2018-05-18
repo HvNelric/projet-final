@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -17,109 +18,75 @@ class Reservation
     private $id;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @var ArrayCollection
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="reservation")
      */
-    private $date_reservation;
+    private $user_reservation;
+
+    /**
+     * @var ArrayCollection
+     * @ORM\ManyToOne(targetEntity="App\Entity\Sejour", inversedBy="sejour_reservation")
+     */
+    private $sejour;
 
     /**
      * @ORM\Column(type="datetime")
+     * @var \DateTime
      */
-    private $date_depart;
-
-    /**
-     * @ORM\Column(type="string", length=20)
-     */
-    private $duree;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $montant;
-
-    /**
-     * @ORM\Column(type="integer")  /////////////////////////////////////////////////// relation à definir
-     */
-    private $user_id_user;
-
-    /**
-     * @ORM\Column(type="integer") ////////////////////////////////////////////////// relation à definir
-     */
-    private $sejour_id_sejour;
+    private $reservation_date;
 
     public function getId()
     {
         return $this->id;
     }
 
-    public function getDateReservation()
+    public function getReservationDate()
     {
-        return $this->date_reservation;
+        return $this->reservation_date;
     }
 
-    public function setDateReservation(\DateTimeInterface $date_reservation): self
+    public function setReservationDate(\DateTimeInterface $reservation_date): self
     {
-        $this->date_reservation = $date_reservation;
+        $this->reservation_date = $reservation_date;
 
         return $this;
     }
 
-    public function getDateDepart()
+    /**
+     * @return ArrayCollection
+     */
+    public function getUserReservation()
     {
-        return $this->date_depart;
+        return $this->user_reservation;
     }
 
-    public function setDateDepart(string $date_depart): self
+    /**
+     * @param ArrayCollection $user_reservation
+     * @return Reservation
+     */
+    public function setUserReservation(ArrayCollection $user_reservation)
     {
-        $this->date_depart = $date_depart;
-
+        $this->user_reservation = $user_reservation;
         return $this;
     }
 
-    public function getDuree()
+    /**
+     * @return ArrayCollection
+     */
+    public function getSejour(): ArrayCollection
     {
-        return $this->duree;
+        return $this->sejour;
     }
 
-    public function setDuree(string $duree): self
+    /**
+     * @param ArrayCollection $sejour
+     * @return Reservation
+     */
+    public function setSejour(ArrayCollection $sejour)
     {
-        $this->duree = $duree;
-
+        $this->sejour = $sejour;
         return $this;
     }
 
-    public function getMontant()
-    {
-        return $this->montant;
-    }
 
-    public function setMontant(int $montant): self
-    {
-        $this->montant = $montant;
-
-        return $this;
-    }
-
-    public function getUserIdUser()
-    {
-        return $this->user_id_user;
-    }
-
-    public function setUserIdUser(int $user_id_user): self
-    {
-        $this->user_id_user = $user_id_user;
-
-        return $this;
-    }
-
-    public function getSejourIdsejour()
-    {
-        return $this->sejour_id_sejour;
-    }
-
-    public function setSejourIdSejour(int $sejour_id_sejour): self
-    {
-        $this->sejour_id_sejour = $sejour_id_sejour;
-
-        return $this;
-    }
 }
