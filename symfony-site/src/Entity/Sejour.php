@@ -68,6 +68,11 @@ class Sejour
      */
     private $transport;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $ville_img;
+
     public function __construct () {
         $this->activites_sejour = new ArrayCollection();
         $this->region_sejour = new ArrayCollection();
@@ -227,4 +232,23 @@ class Sejour
         $this->ville = $ville;
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getVilleImg()
+    {
+        return $this->ville_img;
+    }
+
+    /**
+     * @param mixed $ville_img
+     * @return Sejour
+     */
+    public function setVilleImg($ville_img)
+    {
+        $this->ville_img = $ville_img;
+        return $this;
+    }
+
 }

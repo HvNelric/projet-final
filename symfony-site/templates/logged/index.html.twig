@@ -14,6 +14,7 @@
             </div>
             <div class="col-12">
                 <h4 class="mt-3">{{ userLogged.prenom }} {{ userLogged.nom }}</h4>
+                <a class="btn btn-info" href="{{ path('app_profil_nameedit') }}">Modifier</a>
                 <p class="mt-3">email : {{ userLogged.email }}</p>
                 <p class="mt-3">age : {{ userLogged.age }}</p>
                 <p class="mt-3">Disponibilité : du <span class="text-info">{{ userLogged.getDateDispo|date('d/m/Y') }}</span> au <span class="text-info">{{ userLogged.DateFin|date('d/m/Y') }}</span></p>
