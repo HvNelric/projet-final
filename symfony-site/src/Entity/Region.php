@@ -24,12 +24,19 @@ class Region
 
     /**
      * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="App\Entity\Sejour", mappedBy="region_sejour")
+     */
+    private $sejour_region;
+
+    /**
+     * @var ArrayCollection
      * @ORM\ManyToMany(targetEntity="App\Entity\User", mappedBy="region")
      */
     private $user_region;
 
     public function __construct () {
         $this->user_region = new ArrayCollection();
+        $this->sejour_region = new ArrayCollection();
     }
 
     public function getId()
@@ -76,6 +83,24 @@ class Region
     public function addUserRegion($user_region)
     {
         $this->user_region->add($user_region);
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getSejourRegion()
+    {
+        return $this->sejour_region;
+    }
+
+    /**
+     * @param ArrayCollection $sejour_region
+     * @return Region
+     */
+    public function setSejourRegion(ArrayCollection $sejour_region): Region
+    {
+        $this->sejour_region = $sejour_region;
+        return $this;
     }
 
     public function __toString()

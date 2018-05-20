@@ -33,11 +33,19 @@ class Activites
     /**
      * @param ArrayCollection
      * @ORM\ManyToMany(targetEntity="App\Entity\User", mappedBy="activites")
+     *
      */
     private $user_activites;
 
+    /**
+     * var ArrayCollection
+     * @ORM\OneToMany(targetEntity="App\Entity\Sejour", mappedBy="activites_sejour")
+     */
+    private $sejour_activites;
+
     public function __construct () {
         $this->user_activites = new ArrayCollection();
+        $this->sejour_activites = new ArrayCollection();
     }
 
     public function getId()
@@ -77,6 +85,24 @@ class Activites
     public function addUserActivite($user_activites)
     {
         $this->user_activites->add($user_activites);
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getSejourActivites()
+    {
+        return $this->sejour_activites;
+    }
+
+    /**
+     * @param ArrayCollection $sejour_activites
+     * @return Activites
+     */
+    public function setSejourActivites(ArrayCollection $sejour_activites): Activites
+    {
+        $this->sejour_activites = $sejour_activites;
+        return $this;
     }
 
     public function __toString()

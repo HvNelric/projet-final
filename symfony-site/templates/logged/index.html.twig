@@ -6,9 +6,10 @@
         <h1 class="text-center text-info mt-5">Profil de {{userLogged.prenom  }}</h1>
         <div class="row p-5">
             <div class="col-12">
-                <a href="{{ path('app_profil_edit') }}">
+                <a href="{{ path('app_profil_imgedit') }}">
                     <img class="img-fluid" src="{{ asset('profil-img/' ~ userLogged.getProfilImg) }}" alt="" />
                 </a>
+                <a class="btn btn-info text-right mt-2" href="{{ path('app_profil_imgedit', {id: userLogged.id} ) }}">changer de photo</a>
             </div>
             </div>
             <div class="col-12">
@@ -16,6 +17,24 @@
                 <p class="mt-3">email : {{ userLogged.email }}</p>
                 <p class="mt-3">age : {{ userLogged.age }}</p>
                 <p class="mt-3">Disponibilité : du <span class="text-info">{{ userLogged.getDateDispo|date('d/m/Y') }}</span> au <span class="text-info">{{ userLogged.DateFin|date('d/m/Y') }}</span></p>
+            </div>
+            <div class="col-12 p-5">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Activités : </th>
+                            {% for activity in userLogged.activites %}
+                                <td>{{ activity.name }}</td>
+                            {% endfor %}
+                        </tr>
+                        <tr>
+                            <th scope="row">Régions : </th>
+                            {% for region in userLogged.region %}
+                                <td>{{ region.region }}</td>
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

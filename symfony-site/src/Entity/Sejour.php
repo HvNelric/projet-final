@@ -18,6 +18,26 @@ class Sejour
     private $id;
 
     /**
+     *
+     * @ORM\Column(type="string", length=255)
+     */
+    private $ville;
+
+    /**
+     * @var ArrayCollection
+     * @ORM\ManyToOne(targetEntity="App\Entity\Activites", inversedBy="sejour_activites")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $activites_sejour;
+
+    /**
+     * @var ArrayCollection
+     * @ORM\ManyToOne(targetEntity="App\Entity\Region", inversedBy="sejour_region")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $region_sejour;
+
+    /**
      * @var ArrayCollection
      * @ORM\OneToMany(targetEntity="App\Entity\Reservation", mappedBy="sejour")
      */
@@ -47,6 +67,12 @@ class Sejour
      * @ORM\Column(type="string", length=50)
      */
     private $transport;
+
+    public function __construct () {
+        $this->activites_sejour = new ArrayCollection();
+        $this->region_sejour = new ArrayCollection();
+        $this->sejour_reservation = new ArrayCollection();
+    }
 
     /**
      * @ORM\Column(type="integer")
@@ -148,5 +174,57 @@ class Sejour
         return $this;
     }
 
+    /**
+     * @return ArrayCollection
+     */
+    public function getActivitesSejour()
+    {
+        return $this->activites_sejour;
+    }
 
+    /**
+     * @param ArrayCollection $activites_sejour
+     * @return Sejour
+     */
+    public function setActivitesSejour(ArrayCollection $activites_sejour): Sejour
+    {
+        $this->activites_sejour = $activites_sejour;
+        return $this;
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getRegionSejour()
+    {
+        return $this->region_sejour;
+    }
+
+    /**
+     * @param ArrayCollection $region_sejour
+     * @return Sejour
+     */
+    public function setRegionSejour(ArrayCollection $region_sejour): Sejour
+    {
+        $this->region_sejour = $region_sejour;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getVille()
+    {
+        return $this->ville;
+    }
+
+    /**
+     * @param mixed $ville
+     * @return Sejour
+     */
+    public function setVille($ville)
+    {
+        $this->ville = $ville;
+        return $this;
+    }
 }
