@@ -27,6 +27,7 @@ class DispoType extends AbstractType
                 )
             ->add(
                 'date_fin',
+                        DateType::class,
                 [
                     'label' => 'Date fin de disponibilité ',
                     'attr' => [

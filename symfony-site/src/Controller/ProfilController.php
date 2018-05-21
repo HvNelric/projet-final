@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Activites;
 use App\Entity\Region;
 use App\Entity\User;
+use App\Form\Edit\ActivityType;
 use App\Form\Edit\AgeType;
 use App\Form\Edit\DispoType;
 use App\Form\Edit\EmailType;
@@ -238,6 +239,11 @@ dump($user);
         );
     }
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/edit-date")
+     */
     public function editDate(Request $request) {
 
         $user = $this->getUser();
@@ -253,6 +259,11 @@ dump($user);
 
                 $em->persist($user);
                 $em->flush();
+
+                $this->addFlash('succes', "L'age a été modifié");
+            } else {
+
+                $this->addFlash('error', 'Erreur');
             }
         }
 
@@ -261,6 +272,44 @@ dump($user);
             [
                 'form' => $form->createView(),
                 'user' => $user
+            ]
+        );
+    }
+
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/edit-activites")
+     */
+    public function editActivities(Request $request) {
+
+        $user = $this->getUser();
+
+        $em = $this->getDoctrine()->getManager();
+
+        $form = $this->createForm(ActivityType::class, $user);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted()) {
+
+            if($form->isValid()) {
+
+                $em->persist($user);
+                $em->flush();
+
+                $this->addFlash('succes', "modification enregistrée");
+
+            } else {
+
+                $this->addFlash('error', 'Erreur');
+            }
+        }
+
+        return $this->render(
+            'logged/activities-edit.html.twig',
+            [
+                'form' => $form->createView(),
+                'users' => $user
             ]
         );
     }
