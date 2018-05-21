@@ -75,72 +75,7 @@ class ProfilController extends Controller
      */
     public function imgEdit(Request $request) {
 
-        $user = $this->getUser();
 
-        dump($user);
-
-        $em = $this->getDoctrine()->getManager();
-        $originalImage = null;
-
-            /*if (is_null($user)) {
-                throw new NotFoundHttpException();
-            }*/
-
-            if (!is_null($user->getProfilImg())) {
-                // nom du fichier en bdd
-                $originalImage = $user->getProfilImg();
-                $user->setProfilImg(
-                    new File($this->getParameter('upload_dir') . $originalImage)
-                );
-            }
-
-        $form = $this->createForm(InscriptionType::class, $user);
-
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted()) {
-            if ($form->isValid()) {
-                /** @var UploadedFile|null */
-                $image = $user->getProfileImg();
-
-                // s'il y a eu une image uploadée
-                if (!is_null($image)) {
-                    // nom du fichier que l'on va enregistrer
-                    $filename = uniqid() . '.' . $image->guessExtension();
-
-                    $image->move(
-                    // répertoire de destination
-                    // cf config/services.yaml
-                        $this->getParameter('upload_dir'),
-                        $filename
-                    );
-
-                    // on sette l'image avec le nom qu'on lui a donné
-                    $user->setProfilImg($filename);
-
-                    // suppression de l'ancienne image de l'article
-                    // s'il on est en modification d'un article qui en avait
-                    // déjà une
-                    if (!is_null($originalImage)) {
-                        unlink($this->getParameter('upload_dir') . $originalImage);
-                    }
-                } else {
-                    // sans upload, on garde l'ancienne image
-                    $user->setProfilImg($originalImage);
-                }
-
-                $em->persist($user);
-                $em->flush();
-
-                $this->addFlash('success', "L'article est enregistré");
-                return $this->redirectToRoute('app_admin_article_index');
-            } else {
-                $this->addFlash(
-                    'error',
-                    'Le formulaire contient des erreurs'
-                );
-            }
-        }
 
 
         return $this->render(
@@ -158,45 +93,7 @@ class ProfilController extends Controller
      */
     public function nameEdit(Request $request) {
 
-        $user = $this->getUser();
 
-        dump($user);
-
-        $em = $this->getDoctrine()->getManager();
-
-        if (is_null($user->getId())) { // création
-            $user = new User();
-        } else { // modification
-            $user = $em->find(User::class, $user->getId());
-
-            // 404 si l'id reçu dans l'URL n'existe pas en bdd
-            if (is_null($user)) {
-                throw new NotFoundHttpException();
-            }
-        }
-
-        $form = $this->createForm(InscriptionType::class, $user);
-        // le formulaire analyse la requête HTTP
-        $form->handleRequest($request);
-
-        if($form->isSubmitted()) {
-            if($form->isValid()) {
-                $em->persist($user);
-                $em->flush();
-
-                $this->addFlash(
-                    'success',
-                    'La catégorie est enregistrée'
-                );
-
-                return $this->redirectToRoute('app_admin_category_index');
-            } else {
-                $this->addFlash(
-                    'error',
-                    'Le formulaire contient des erreurs'
-                );
-            }
-        }
 
         return $this->render(
             'logged/name-edit.html.twig',
@@ -205,6 +102,26 @@ class ProfilController extends Controller
                 'user' => $user
             ]
         );
+    }
+
+    /**
+     * @param User $user
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Route("/delete/{id}")
+     */
+    public function delete(User $user) {
+
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($user);
+        $em->flush();
+
+        $this->addFlash(
+            'success',
+            'votre compte est supprimé'
+        );
+
+        return $this->redirectToRoute('app_index_index');
     }
 
 }

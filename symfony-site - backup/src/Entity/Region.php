@@ -4,12 +4,9 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\RegionRepository")
- * @UniqueEntity(fields="region", message="il existe déjà une region de ce nom")
  */
 class Region
 {
@@ -21,12 +18,7 @@ class Region
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, unique=true)
-     * Validation :
-     * -non vide
-     * * @Assert\NotBlank(message="Le nom est obligatoire")
-     * - nombre de caractères
-     * @Assert\Length(max="255", maxMessage="Le nom ne doit pas dépasser {{ limit }} caractères")
+     * @ORM\Column(type="string", length=255)
      */
     private $region;
 
@@ -52,12 +44,18 @@ class Region
         return $this->id;
     }
 
+    /**
+     * @return mixed
+     */
     public function getRegion()
     {
         return $this->region;
     }
 
-
+    /**
+     * @param mixed $region
+     * @return Region
+     */
     public function setRegion($region)
     {
         $this->region = $region;

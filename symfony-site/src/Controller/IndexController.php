@@ -12,6 +12,13 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return $this->render('index/index.html.twig');
+        $user = $this->getUser();
+dump($user);
+        return $this->render(
+            'layout.html.twig',
+            [
+                'user' => $user
+            ]
+        );
     }
 }

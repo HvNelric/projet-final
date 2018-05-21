@@ -6,7 +6,7 @@
 
     <style>
         .users-index{
-            background: black;
+            background: var(--vio2);
             padding: 5rem 0;
         }
 
@@ -30,7 +30,7 @@
         .user-lastname, .user-destination, .user-comment{
             padding: 0.2rem 1rem;
             margin: 0 0 0.9rem 0;
-            background: white;
+            background: var(--bg2);
             display: inline-block;
             border-radius: 0 1rem 1rem 0;
         }
@@ -47,17 +47,17 @@
     </style>
 
     <div class="container">
-        <div class="row users-index">
+        <div class="row">
             {% for user in users %}
-            <div class="col-6 col-md-4 mt-4">
-                <div class="user-container d-flex justify-content-start">
-                    <div class="user-img">
-                        <img class="img-fluid" src="{{ asset('profil-img/' ~ user.profilImg) }}" alt="image du profil" />
+            <div className="col-6 col-md-4 mt-4">
+                <div className="user-container d-flex justify-content-start">
+                    <div className="user-img">
+                        <img src={profil01} alt="image du profil"></img>
                     </div>
-                    <div class="user-content">
-                        <h5 class="user-lastname">{{ user.prenom }}</h5>
-                        <p class="user-destination"><span>Date : </span>{{ user.dateDispo|date('d/m/Y') }}</p>
-                        <p class="user-comment">bla bla</p>
+                    <div className="user-content">
+                        <h5 className="user-lastname">{{ user.prenom }}</h5>
+                        <p className="user-destination"><span>Date : </span>{{ user.dateDispo|date('d/m/Y') }}</p>
+                        <p className="user-comment">bla bla</p>
                     </div>
                 </div>
             </div>

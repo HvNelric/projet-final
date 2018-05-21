@@ -3,6 +3,7 @@
 parameters:
     locale: 'fr'
     upload_dir: '%kernel.project_dir%/public/profil-img/'
+    sejour_dir: '%kernel.project_dir%/public/sejour-img/'
 services:
     # default configuration for services in *this* file
     _defaults:

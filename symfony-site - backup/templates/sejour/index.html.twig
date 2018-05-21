@@ -1,0 +1,22 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            {% for sejour in sejours %}
+                {{ dump(sejour.ville) }}
+                <div className="col-6 col-md-4">
+                    <div className="card my-card">
+                        <img className="card-img-top" src={image01} alt="destination" ></img>
+                        <div className="card-body clearfix">
+                            <h5 className="card-title">{{ sejour.ville }}</h5>
+                            <p className="card-text">{{ sejour.description }}</p>
+                            <a href="#" className="btn btn-info float-right my-btn">plus de détails</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
