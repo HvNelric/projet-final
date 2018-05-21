@@ -25,7 +25,7 @@ class ActivityType extends AbstractType
                             'required' => false,
                             'choice_label' => 'getName',
                             'attr' => [
-                                'class' => 'form-control'
+                                'class' => 'form-control form-check-input'
                             ]
                         ]
                 )

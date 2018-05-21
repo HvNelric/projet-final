@@ -24,16 +24,16 @@ class Sejour
     private $ville;
 
     /**
-     * @var ArrayCollection
+     * v@ar ArrayCollection
      * @ORM\ManyToOne(targetEntity="App\Entity\Activites", inversedBy="sejour_activites")
-     * @ORM\JoinColumn(nullable=false)
+     * ORM\JoinColumn(nullable=false)
      */
     private $activites_sejour;
 
     /**
      * @var ArrayCollection
      * @ORM\ManyToOne(targetEntity="App\Entity\Region", inversedBy="sejour_region")
-     * @ORM\JoinColumn(nullable=false)
+     * ORM\JoinColumn(nullable=false)
      */
     private $region_sejour;
 
@@ -173,7 +173,7 @@ class Sejour
      * @param ArrayCollection $sejour_reservation
      * @return Sejour
      */
-    public function setSejourReservation(ArrayCollection $sejour_reservation)
+    public function setSejourReservation( $sejour_reservation)
     {
         $this->sejour_reservation = $sejour_reservation;
         return $this;
@@ -191,7 +191,7 @@ class Sejour
      * @param ArrayCollection $activites_sejour
      * @return Sejour
      */
-    public function setActivitesSejour(ArrayCollection $activites_sejour): Sejour
+    public function setActivitesSejour( $activites_sejour): Sejour
     {
         $this->activites_sejour = $activites_sejour;
         return $this;
@@ -209,7 +209,7 @@ class Sejour
      * @param ArrayCollection $region_sejour
      * @return Sejour
      */
-    public function setRegionSejour(ArrayCollection $region_sejour): Sejour
+    public function setRegionSejour($region_sejour): Sejour
     {
         $this->region_sejour = $region_sejour;
         return $this;

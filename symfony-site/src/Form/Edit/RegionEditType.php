@@ -24,8 +24,8 @@ class RegionEditType extends AbstractType
                         'required' => false,
                         'choice_label' => 'getRegion',
                         'attr' => [
-                            'class' => 'form-check-input',
-                            'class' => 'form-control'
+                            'class' => 'form-check-input form-control'
+
                         ],
                     ]
                 )

@@ -4,3 +4,5 @@ symfony-site.7z.tmp
 *.7z
 symfony-site/.idea/workspace.xml
 symfony-site/.idea/workspace.xml
+symfony-site/.idea/commandlinetools/Symfony_20_05_18_10_18_s.xml
+symfony-site/.idea/commandlinetools/Symfony_21_05_18_22_56_s.xml

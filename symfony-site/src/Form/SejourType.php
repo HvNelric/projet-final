@@ -135,7 +135,7 @@ class SejourType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Sejour::class,
+            'data_class' => Sejour::class
         ]);
     }
 }
