@@ -25,6 +25,7 @@ class NameType extends AbstractType
                 )
             ->add(
                 'nom',
+                    TextType::class,
                     [
                         'label' => 'Nom',
                         'attr' => [
@@ -40,6 +41,7 @@ class NameType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => User::class,
+
         ]);
     }
 }

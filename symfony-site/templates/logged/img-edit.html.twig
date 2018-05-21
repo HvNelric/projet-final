@@ -11,12 +11,14 @@
                         retour
                     </a>
                 </div>
-                <a href="{{ path('app_profil_imgedit') }}">
-                    <img class="img-fluid" src="{{ asset('profil-img/' ~ user.getProfilImg) }}" alt="" />
+                <a href="{{ path('app_profil_editimg') }}">
+                    <img class="img-fluid" src="{{ asset('profil-img/' ~ user.profilImg) }}" alt="" />
                 </a>
+                {{ dump(user.profilImg) }}
             </div>
             <div class="col-6">
                 <div class="form-control p-5">
+                    {{ form_start(form) }}
                     <div class="form-group">
                         {{ form_row(form.profil_img) }}
                     </div>
@@ -26,6 +28,7 @@
                         Enregistrer
                     </button>
                 </div>
+                {{ form_end(form) }}
             </div>
         </div>
 
