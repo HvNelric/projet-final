@@ -2,7 +2,6 @@
 
 namespace App\Form\Edit;
 
-use App\Entity\Activites;
 use App\Entity\Region;
 use App\Entity\User;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -10,24 +9,25 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ActivityType extends AbstractType
+class RegionEditType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
             ->add(
-                'activites',
+                'region',
                     EntityType::class,
-                        [
-                            'class' => Activites::class,
-                            'multiple' => true,
-                            'expanded' => true,
-                            'required' => false,
-                            'choice_label' => 'getName',
-                            'attr' => [
-                                'class' => 'form-control'
-                            ]
-                        ]
+                    [
+                        'class' => Region::class,
+                        'multiple' => true,
+                        'expanded' => true,
+                        'required' => false,
+                        'choice_label' => 'getRegion',
+                        'attr' => [
+                            'class' => 'form-check-input',
+                            'class' => 'form-control'
+                        ],
+                    ]
                 )
         ;
     }

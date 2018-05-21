@@ -69,39 +69,9 @@ class ProfilController extends Controller
         );
     }
 
-    /**
-     * @Route("/edit/photo")
-     * @param Request $request
-     */
-    public function imgEdit(Request $request) {
+    public function editImg() {
 
 
-
-
-        return $this->render(
-            'logged/img-edit.html.twig',
-            [
-                'form' => $form->createView(),
-                'user' => $user
-            ]
-        );
-    }
-
-    /**
-     * @param Request $request
-     * @Route("/edit/name")
-     */
-    public function nameEdit(Request $request) {
-
-
-
-        return $this->render(
-            'logged/name-edit.html.twig',
-            [
-                'form' => $form->createView(),
-                'user' => $user
-            ]
-        );
     }
 
     /**

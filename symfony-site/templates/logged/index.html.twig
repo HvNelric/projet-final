@@ -6,10 +6,12 @@
         <h1 class="text-center text-info mt-5">Profil de {{userLogged.prenom  }}</h1>
         <div class="row p-5">
             <div class="col-12">
-                <a href="{{ path('app_profil_imgedit') }}">
+                <a href="{{ path('app_profil_editimg') }}">
                     <img class="img-fluid" src="{{ asset('profil-img/' ~ userLogged.getProfilImg) }}" alt="" />
                 </a>
-                <a class="btn btn-info text-right mt-2" href="{{ path('app_profil_imgedit', {id: userLogged.id} ) }}">changer de photo</a>
+                <a class="btn btn-info text-right mt-2" href="{{ path('app_profil_editimg', {id: userLogged.id} ) }}">
+                    Changer de photo
+                </a>
             </div>
             </div>
             <div class="col-12">
