@@ -22,8 +22,6 @@ class Activites
 
     /**
      * @ORM\Column(type="string", length=20, unique=true)
-     * Validation :
-     *  -non vide
      * @Assert\NotBlank(message="Le nom est obligatoire")
      *  - nombre de caractères
      * @Assert\Length(max="20", maxMessage="Le nom ne doit pas dépasser {{ limit }} caractères")
@@ -31,14 +29,14 @@ class Activites
     private $name;
 
     /**
-     * @param ArrayCollection
+     * @var ArrayCollection
      * @ORM\ManyToMany(targetEntity="App\Entity\User", mappedBy="activites")
      *
      */
     private $user_activites;
 
     /**
-     * var ArrayCollection
+     * @var ArrayCollection
      * @ORM\OneToMany(targetEntity="App\Entity\Sejour", mappedBy="activites_sejour")
      */
     private $sejour_activites;

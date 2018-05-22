@@ -31,7 +31,7 @@ class Region
     private $region;
 
     /**
-     * @var ArrayCollection
+     * var ArrayCollection
      * @ORM\OneToMany(targetEntity="App\Entity\Sejour", mappedBy="region_sejour")
      */
     private $sejour_region;
@@ -76,7 +76,7 @@ class Region
      * @param ArrayCollection $user_region
      * @return Region
      */
-    public function setUserRegion(ArrayCollection $user_region)
+    public function setUserRegion($user_region)
     {
         $this->user_region = $user_region;
         return $this;
@@ -99,7 +99,7 @@ class Region
      * @param ArrayCollection $sejour_region
      * @return Region
      */
-    public function setSejourRegion(ArrayCollection $sejour_region): Region
+    public function setSejourRegion($sejour_region): Region
     {
         $this->sejour_region = $sejour_region;
         return $this;

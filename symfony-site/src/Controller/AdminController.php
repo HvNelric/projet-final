@@ -49,8 +49,9 @@ class AdminController extends Controller
         $form->handleRequest($request);
 
         if($form->isSubmitted()) {
+            dump('submit');
             if($form->isValid()) {
-
+                dump('valid');
                 $image = $sejour->getVilleImg();
 
                 if(!is_null($image)) {
@@ -61,15 +62,16 @@ class AdminController extends Controller
                         $this->getParameter('sejour_dir'), $filename
                     );
 
-                    $user->setVilleImg($filename);
+                    $sejour->setVilleImg($filename);
                 }
 
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($sejour);
                 $em->flush();
 
-                $this->addFlash('succes', 'Votre compte est crée');
-                return $this->redirectToRoute('app_admin_index');
+                $this->addFlash('succes', 'Votre ville a été ajoutée');
+            } else {
+                $this->addFlash('error', 'Le formulaire contient des erreurs');
             }
         }
 
@@ -120,7 +122,9 @@ class AdminController extends Controller
      * @Route("/add-region")
      */
     public function addRegion(Request $request) {
+
         $region = new Region();
+
         $form = $this->createForm(Region::class, $region);
         $form->handleRequest($request);
 
@@ -132,7 +136,7 @@ class AdminController extends Controller
                 $em->flush();
 
                 $this->addFlash('sucess', "L'activitée est enregistré");
-                return $this->redirectToRoute('app_admin_addactivites');
+
             } else {
                 $this->addFlash('error', 'Le formulaire contient des erreurs');
             }
