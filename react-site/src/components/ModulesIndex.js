@@ -8,7 +8,7 @@ import UsersIndex from '../modules_index/UsersIndex';
 import GroupsIndex from '../modules_index/GroupsIndex';
 import HowtoIndex from '../modules_index/HowtoIndex';
 import Footer from '../modules_index/Footer';
-import NavbarMod from '../components/NavbarMod';
+// import NavbarMod from '../components/NavbarMod';
 import Header from '../components/Header';
 import EtapesIndex from "../modules_index/EtapesIndex";
 
@@ -16,8 +16,8 @@ class ModulesIndex extends Component{
     render() {
         return(
             <div>
-                <NavbarMod />
                 <Header />
+                
                 <div className="container-fluid p-0" id="page-container"> {/** PAGE CONTAINER **/}
                     <EtapesIndex />
                     <DestinationIndex />
