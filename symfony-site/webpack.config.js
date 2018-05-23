@@ -19,6 +19,11 @@ Encore
 
     // uncomment for legacy applications that require $/jQuery as a global variable
     // .autoProvidejQuery()
+    // Activer React
+    .enableReactPreset()
+
+    // Route
+    .addEntry('js/app', './app.js')
 ;
 
 module.exports = Encore.getWebpackConfig();

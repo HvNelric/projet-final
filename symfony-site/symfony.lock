@@ -83,6 +83,18 @@
     "jms/serializer": {
         "version": "1.11.0"
     },
+<<<<<<< HEAD
+    "jms/serializer-bundle": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "fe60ce509ef04a3f40da96e3979bc8d9b13b2372"
+        }
+    },
+=======
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
     "monolog/monolog": {
         "version": "1.23.0"
     },
@@ -268,6 +280,9 @@
             "version": "3.3",
             "ref": "179470cb6492db92dffee208cfdb436f175c93b4"
         }
+    },
+    "symfony/polyfill-ctype": {
+        "version": "v1.8.0"
     },
     "symfony/polyfill-intl-icu": {
         "version": "v1.8.0"

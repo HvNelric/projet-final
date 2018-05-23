@@ -24,6 +24,7 @@ class ModulesIndex extends Component{
                     <UsersIndex />
                     <GroupsIndex />
                     <HowtoIndex />
+                    <ModulesIndex />
                 </div> {/* /PAGE CONTAINER */}
                 <Footer />
             </div>

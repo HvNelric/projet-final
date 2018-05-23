@@ -1,0 +1,29 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+
+            {{ form_start(form) }}
+            <div class="col-12">
+                <p>{{user.email}}</p>
+            </div>
+            <div class="col-12">
+                <div class="form-btn-group text-right">
+                    <a href="{{ path('app_profil_index') }}" class="btn btn-danger mt-4">
+                        Retour
+                    </a>
+                </div>
+                <div class="form-group">
+                    {{ form_row(form.email) }}
+                </div>
+                <div class="form-btn-group text-right">
+                    <button type="submit" class="btn btn-info mt-4">
+                        Enregistrer
+                    </button>
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

@@ -4,8 +4,13 @@ symfony-site.7z.tmp
 *.7z
 symfony-site/.idea/workspace.xml
 symfony-site/.idea/workspace.xml
+<<<<<<< HEAD
 symfony-site/.idea/workspace.xml
+<<<<<<< HEAD
+=======
+symfony-site/.idea/commandlinetools/Symfony_20_05_18_10_18_s.xml
 symfony-site/.idea/commandlinetools/Symfony_21_05_18_22_56_s.xml
+<<<<<<< HEAD
 *.xsd
 symfony-site - Copie/.idea/misc.xml
 symfony-site - Copie/.idea/composerJson.xml
@@ -16,3 +21,9 @@ symfony-site - Copie/.idea/symfony2.xml
 symfony-site - Copie/.idea/vcs.xml
 symfony-site - Copie/.idea/workspace.xml
 symfony-site/.idea/workspace.xml
+=======
+>>>>>>> d1ac4906079414c3de4bd1889c58abcc6f1bd07d
+=======
+symfony-site/.idea/commandlinetools/Symfony_21_05_18_22_56_s.xml
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
+>>>>>>> 1fbecad45df0bbd428f70b74397cd4ed6038ee99

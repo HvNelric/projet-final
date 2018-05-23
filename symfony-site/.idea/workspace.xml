@@ -25,14 +25,58 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <splitter split-orientation="horizontal" split-proportion="0.49694002">
+=======
+    <splitter split-orientation="horizontal" split-proportion="0.48641655">
+>>>>>>> d1ac4906079414c3de4bd1889c58abcc6f1bd07d
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
+          <file leaf-file-name="ProfilController.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Controller/ProfilController.php">
+              <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+                <state relative-caret-position="315">
+                  <caret line="189" column="58" lean-forward="true" selection-start-line="189" selection-start-column="58" selection-end-line="189" selection-end-column="58" />
+=======
+                <state relative-caret-position="183">
+                  <caret line="285" column="33" selection-start-line="285" selection-start-column="33" selection-end-line="285" selection-end-column="33" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-2494">
+                  <caret line="109" column="7" selection-start-line="109" selection-start-column="7" selection-end-line="109" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SecurityController.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-920">
+                  <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Controller/AdminController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="317">
+                  <caret line="131" selection-start-line="131" selection-end-line="131" />
+>>>>>>> d1ac4906079414c3de4bd1889c58abcc6f1bd07d
+=======
           <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Controller/AdminController.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1632">
                   <caret line="104" selection-start-line="104" selection-end-line="104" />
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
                   <folding>
                     <element signature="e#34#59#0#PHP" expanded="true" />
                   </folding>
@@ -40,8 +84,14 @@
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <file leaf-file-name="InscriptionType.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Form/InscriptionType.php">
+=======
           <file leaf-file-name="ProfilController.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Controller/ProfilController.php">
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="459">
                   <caret line="152" column="42" selection-start-line="152" selection-start-column="42" selection-end-line="152" selection-end-column="42" />
@@ -55,10 +105,26 @@
           <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
                 <state relative-caret-position="5780">
+=======
+<<<<<<< HEAD
+                <state relative-caret-position="459">
+                  <caret line="27" column="21" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="21" />
+=======
+          <file leaf-file-name="RegionEditType.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Form/Edit/RegionEditType.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="288">
+                  <caret line="20" column="41" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="41" />
+>>>>>>> d1ac4906079414c3de4bd1889c58abcc6f1bd07d
+=======
+                <state relative-caret-position="302">
+>>>>>>> 1fbecad45df0bbd428f70b74397cd4ed6038ee99
                   <caret line="345" column="37" selection-start-line="345" selection-start-column="37" selection-end-line="345" selection-end-column="37" />
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
                   <folding>
-                    <element signature="e#30#75#0#PHP" expanded="true" />
+                    <element signature="e#33#55#0#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -67,20 +133,46 @@
           <file leaf-file-name="Activites.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Entity/Activites.php">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
                 <state relative-caret-position="544">
+=======
+<<<<<<< HEAD
+                <state relative-caret-position="285">
+                  <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+=======
+                <state relative-caret-position="305">
+>>>>>>> 1fbecad45df0bbd428f70b74397cd4ed6038ee99
                   <caret line="35" column="27" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="27" />
                   <folding>
                     <element signature="e#30#78#0#PHP" expanded="true" />
                   </folding>
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
+          <file leaf-file-name="sejour.html.twig" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/admin/sejour.html.twig">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="238">
+                  <caret line="17" column="23" selection-end-line="2" selection-end-column="19" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Activites.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Entity/Activites.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="203">
+                  <caret line="84" column="34" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="34" />
+=======
           <file leaf-file-name="Region.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Entity/Region.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1479">
                   <caret line="90" selection-start-line="90" selection-end-line="90" />
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
                   <folding>
                     <element signature="e#30#78#0#PHP" expanded="true" />
                   </folding>
@@ -88,6 +180,32 @@
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
+          <file leaf-file-name="Region.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Entity/Region.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1011">
+                  <caret line="101" column="36" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
+                  <folding>
+                    <element signature="e#30#78#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ActivityType.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Form/Edit/ActivityType.php">
+              <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+                <state relative-caret-position="425">
+                  <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+=======
+                <state relative-caret-position="408">
+                  <caret line="27" column="73" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
+>>>>>>> d1ac4906079414c3de4bd1889c58abcc6f1bd07d
+                  <folding>
+                    <element signature="e#33#58#0#PHP" expanded="true" />
+=======
           <file leaf-file-name="Sejour.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Entity/Sejour.php">
               <provider selected="true" editor-type-id="text-editor">
@@ -95,6 +213,7 @@
                   <caret line="18" selection-start-line="18" selection-end-line="18" />
                   <folding>
                     <element signature="e#30#78#0#PHP" expanded="true" />
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
                   </folding>
                 </state>
               </provider>
@@ -122,6 +241,7 @@
       <find>type</find>
       <find>unique</find>
       <find>getP</find>
+      <find>add</find>
     </findStrings>
   </component>
   <component name="FrameworkCommandLineHistory">
@@ -137,6 +257,9 @@
       <command text="s server:run " />
       <command text="s make:form " />
       <command text="s server:run " />
+      <command text="s doctrine:schema:validate" />
+      <command text="s translation:update --force" />
+      <command text="s doctrine:schema:update --force" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -156,7 +279,6 @@
         <option value="$PROJECT_DIR$/src/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/templates/layout.html.twig" />
         <option value="$PROJECT_DIR$/templates/amin/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Form/SejourType.php" />
         <option value="$PROJECT_DIR$/templates/security/register.html.twig" />
         <option value="$PROJECT_DIR$/templates/admin/sejour.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/ActivitesController.php" />
@@ -171,8 +293,6 @@
         <option value="$PROJECT_DIR$/src/Form/Edit/ChangePassord.php" />
         <option value="$PROJECT_DIR$/src/Form/Edit/ChangePassword.php" />
         <option value="$PROJECT_DIR$/src/Form/Edit/AgeType.php" />
-        <option value="$PROJECT_DIR$/src/Form/Edit/ActivityType.php" />
-        <option value="$PROJECT_DIR$/src/Form/Edit/RegionEditType.php" />
         <option value="$PROJECT_DIR$/src/Controller/SecurityController.php" />
         <option value="$PROJECT_DIR$/src/Form/Edit/ImgType.php" />
         <option value="$PROJECT_DIR$/templates/logged/img-edit.html.twig" />
@@ -190,6 +310,13 @@
         <option value="$PROJECT_DIR$/src/Controller/AdminController.php" />
         <option value="$PROJECT_DIR$/src/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/Controller/ProfilController.php" />
+        <option value="$PROJECT_DIR$/src/Form/SejourType.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Activites.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Sejour.php" />
+        <option value="$PROJECT_DIR$/src/Form/Edit/RegionEditType.php" />
+        <option value="$PROJECT_DIR$/src/Form/Edit/ActivityType.php" />
+        <option value="$PROJECT_DIR$/src/Controller/AdminController.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Region.php" />
       </list>
     </option>
   </component>
@@ -308,7 +435,7 @@
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="1820" />
     <option name="height" value="1047" />
@@ -436,28 +563,81 @@
       <updated>1526803204101</updated>
       <workItem from="1526803208096" duration="31783000" />
       <workItem from="1526858271504" duration="6212000" />
+<<<<<<< HEAD
       <workItem from="1526888271807" duration="24628000" />
+<<<<<<< HEAD
+=======
+      <workItem from="1526888271807" duration="21601000" />
+      <workItem from="1526935888520" duration="46000" />
+      <workItem from="1526936094449" duration="6153000" />
+>>>>>>> d1ac4906079414c3de4bd1889c58abcc6f1bd07d
+=======
       <workItem from="1527010061598" duration="1115000" />
       <workItem from="1527011265995" duration="12784000" />
+<<<<<<< HEAD
       <workItem from="1527090851303" duration="334000" />
+=======
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
+>>>>>>> 1fbecad45df0bbd428f70b74397cd4ed6038ee99
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="76856000" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="62623000" />
+=======
+    <option name="totallyTimeSpent" value="76522000" />
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
+>>>>>>> 1fbecad45df0bbd428f70b74397cd4ed6038ee99
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.20261438" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Command Line Tools Console" order="7" sideWeight="0.49946696" visible="true" weight="0.2413793" />
+=======
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Command Line Tools Console" order="7" sideWeight="0.49946696" visible="true" weight="0.24183007" />
+=======
+    <option name="totallyTimeSpent" value="65795000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="0" width="1820" height="1047" extended-state="0" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.20261438" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="7" sideWeight="0.49946696" visible="true" weight="0.24642465" />
+>>>>>>> d1ac4906079414c3de4bd1889c58abcc6f1bd07d
+=======
+      <window_info anchor="bottom" id="Command Line Tools Console" order="7" sideWeight="0.49946696" visible="true" weight="0.2413793" />
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
+>>>>>>> 1fbecad45df0bbd428f70b74397cd4ed6038ee99
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3297414" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13219616" />
+=======
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Terminal" order="7" />
+<<<<<<< HEAD
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12899786" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12159091" />
+>>>>>>> d1ac4906079414c3de4bd1889c58abcc6f1bd07d
+=======
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3297414" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13113007" />
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
+>>>>>>> 1fbecad45df0bbd428f70b74397cd4ed6038ee99
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -502,13 +682,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/AminController.php" />
-    <entry file="file://$PROJECT_DIR$/templates/sejour/detail.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/sejour/detail.html.twig" />
     <entry file="file://$PROJECT_DIR$/templates/amin/index.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/Repository/UserRepository.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -517,9 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding>
-            <element signature="e#34#81#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -547,24 +718,28 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/Controller/SejourController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+=======
     <entry file="file://$PROJECT_DIR$/src/Form/SejourType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="114" column="25" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/ActivitesController.php" />
-    <entry file="file://$PROJECT_DIR$/templates/admin/sejour.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repository/RegionRepository.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/templates/admin/index.html.twig" />
+=======
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
     <entry file="file://$PROJECT_DIR$/vendor/symfony/form/FormBuilderInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -572,6 +747,16 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/templates/admin/region.html.twig" />
+    <entry file="file://$PROJECT_DIR$/src/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/activites.html.twig" />
+    <entry file="file://$PROJECT_DIR$/src/Form/Edit/EmailType.php" />
+    <entry file="file://$PROJECT_DIR$/src/Form/Edit/ChangePassord.php" />
+    <entry file="file://$PROJECT_DIR$/src/Form/Edit/ChangePassword.php" />
+=======
     <entry file="file://$PROJECT_DIR$/templates/admin/region.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -619,6 +804,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
     <entry file="file://$PROJECT_DIR$/templates/user/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-170">
@@ -626,6 +812,9 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/Form/Edit/ImgType.php" />
+=======
     <entry file="file://$PROJECT_DIR$/src/Form/Edit/ImgType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -633,6 +822,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
     <entry file="file://$PROJECT_DIR$/vendor/symfony/options-resolver/OptionsResolver.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1205">
@@ -640,10 +830,28 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/Form/Edit/NameType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="42" column="23" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
     <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-556">
           <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/Form/Edit/NameType.php" />
+    <entry file="file://$PROJECT_DIR$/src/Form/InscriptionType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2677">
+          <caret line="175" column="28" selection-start-line="175" selection-start-column="28" selection-end-line="175" selection-end-column="28" />
+>>>>>>> d1ac4906079414c3de4bd1889c58abcc6f1bd07d
         </state>
       </provider>
     </entry>
@@ -661,29 +869,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/Edit/AgeType.php">
+    <entry file="file://$PROJECT_DIR$/src/Form/Edit/AgeType.php" />
+    <entry file="file://$PROJECT_DIR$/templates/logged/age-edit.html.twig" />
+    <entry file="file://$PROJECT_DIR$/src/Form/Edit/DispoType.php" />
+    <entry file="file://$PROJECT_DIR$/templates/logged/email-edit.html.twig" />
+    <entry file="file://$PROJECT_DIR$/templates/logged/date-edit.html.twig" />
+    <entry file="file://$PROJECT_DIR$/templates/logged/activities-edit.html.twig" />
+    <entry file="file://$PROJECT_DIR$/templates/logged/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+        <state relative-caret-position="285">
+          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/logged/age-edit.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Controller/ProfilController.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="183">
+          <caret line="285" column="33" selection-start-line="285" selection-start-column="33" selection-end-line="285" selection-end-column="33" />
+=======
         <state relative-caret-position="357">
           <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/Edit/DispoType.php">
+    <entry file="file://$PROJECT_DIR$/src/Form/RegionType.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/ActivitesType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+        <state relative-caret-position="374">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/templates/logged/email-edit.html.twig">
+=======
+    <entry file="file://$PROJECT_DIR$/src/Entity/Sejour.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="884">
+          <caret line="175" column="41" selection-start-line="175" selection-start-column="41" selection-end-line="175" selection-end-column="41" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+=======
         <state relative-caret-position="170">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
@@ -710,11 +941,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="155" selection-start-line="155" selection-end-line="155" />
+<<<<<<< HEAD
+=======
+          <folding>
+            <element signature="e#28#53#0#PHP" expanded="true" />
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
+          </folding>
+>>>>>>> 1fbecad45df0bbd428f70b74397cd4ed6038ee99
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/logged/date-edit.html.twig">
+    <entry file="file://$PROJECT_DIR$/templates/admin/sejour.html.twig">
+>>>>>>> d1ac4906079414c3de4bd1889c58abcc6f1bd07d
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="238">
+          <caret line="17" column="23" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/SejourType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2159">
+          <caret line="137" column="41" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="41" />
+=======
         <state relative-caret-position="102">
           <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
         </state>
@@ -741,20 +991,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="44" column="52" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Sejour.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="289">
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="408">
+          <caret line="27" column="73" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
+=======
+        <state relative-caret-position="17">
+>>>>>>> 1fbecad45df0bbd428f70b74397cd4ed6038ee99
           <caret line="18" selection-start-line="18" selection-end-line="18" />
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
           <folding>
             <element signature="e#30#78#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/Form/Edit/RegionEditType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="41" />
+          <folding>
+            <element signature="e#33#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Activites.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="84" column="34" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="34" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/Form/InscriptionType.php">
+=======
+    <entry file="file://$PROJECT_DIR$/src/Entity/Activites.php">
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="35" column="27" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="27" />
@@ -776,7 +1061,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1632">
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="425">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/Entity/Region.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1011">
+          <caret line="101" column="36" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
+>>>>>>> d1ac4906079414c3de4bd1889c58abcc6f1bd07d
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+=======
+        <state relative-caret-position="132">
+>>>>>>> 1fbecad45df0bbd428f70b74397cd4ed6038ee99
           <caret line="104" selection-start-line="104" selection-end-line="104" />
           <folding>
             <element signature="e#34#59#0#PHP" expanded="true" />
@@ -790,10 +1091,22 @@
           <caret line="345" column="37" selection-start-line="345" selection-start-column="37" selection-end-line="345" selection-end-column="37" />
           <folding>
             <element signature="e#30#75#0#PHP" expanded="true" />
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/Controller/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="315">
+          <caret line="189" column="58" lean-forward="true" selection-start-line="189" selection-start-column="58" selection-end-line="189" selection-end-column="58" />
+=======
+        <state relative-caret-position="317">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
+>>>>>>> d1ac4906079414c3de4bd1889c58abcc6f1bd07d
+=======
     <entry file="file://$PROJECT_DIR$/src/Form/Edit/NameType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -805,16 +1118,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="152" column="42" selection-start-line="152" selection-start-column="42" selection-end-line="152" selection-end-column="42" />
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
           <folding>
             <element signature="e#34#59#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2494">
+          <caret line="109" column="7" selection-start-line="109" selection-start-column="7" selection-end-line="109" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-920">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+=======
     <entry file="file://$PROJECT_DIR$/templates/admin/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
         </state>
       </provider>
     </entry>
