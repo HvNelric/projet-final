@@ -150,7 +150,7 @@ class ProfilController extends Controller
 
         $em = $this->getDoctrine()->getManager();
 
-        $form = $this->createForm(InscriptionType::class, $user);
+        $form = $this->createForm(NameType::class, $user);
         $form->handleRequest($request);
 dump($user);
         if($form->isSubmitted()) {

@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "c31bf30e0cd3aa9a82f7edfafe2d0bf5",
+=======
+    "content-hash": "4d8e297a989335326feafeff206aaa8d",
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1259,6 +1263,7 @@
             "time": "2018-02-04T17:48:54+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "jms/serializer-bundle",
             "version": "2.4.0",
             "source": {
@@ -1333,6 +1338,8 @@
             "time": "2018-05-20T07:28:26+00:00"
         },
         {
+=======
+>>>>>>> 2e89a57ec98e67f7a5e40f39bbf05cbc9ecb2ab0
             "name": "monolog/monolog",
             "version": "1.23.0",
             "source": {

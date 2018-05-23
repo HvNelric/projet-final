@@ -3,20 +3,22 @@
 {% block content %}
 
     <div class="container">
-        <div class="row">
+        <div class="row mt-5">
             {% for sejour in sejours %}
-                {{ dump(sejour.ville) }}
-                <div className="col-6 col-md-4">
-                    <div className="card my-card">
-                        <img className="card-img-top" src={image01} alt="destination" ></img>
-                        <div className="card-body clearfix">
-                            <h5 className="card-title">{{ sejour.ville }}</h5>
-                            <p className="card-text">{{ sejour.description }}</p>
-                            <a href="#" className="btn btn-info float-right my-btn">plus de détails</a>
+                <div class="col-6 col-md-4">
+                    <div class="card my-card">
+                        <img class="card-img-top" src="{{ asset('sejour-img/' ~ sejour.villeImg) }}" alt="destination" />
+                        <div class="card-body clearfix">
+                            <h5 class="card-title">{{ sejour.ville }}</h5>
+                            <p class="card-text">{{ sejour.description }}</p>
+                            <a href="{{ path('app_sejour_details', {id: sejour.id}) }}" class="btn btn-info float-right my-btn">
+                                + détails
+                            </a>
                         </div>
                     </div>
                 </div>
             {% endfor %}
         </div>
     </div>
+
 {% endblock %}

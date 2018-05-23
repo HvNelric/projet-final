@@ -5,6 +5,12 @@ namespace App\Controller;
 use App\Entity\Activites;
 use App\Entity\Region;
 use App\Entity\User;
+use App\Form\Edit\ActivityType;
+use App\Form\Edit\AgeType;
+use App\Form\Edit\DispoType;
+use App\Form\Edit\EmailType;
+use App\Form\Edit\ImgType;
+use App\Form\Edit\NameType;
 use App\Form\InscriptionType;
 
 use Symfony\Component\HttpFoundation\File\File;
@@ -70,78 +76,59 @@ class ProfilController extends Controller
     }
 
     /**
-     * @Route("/edit/photo")
-     * @param Request $request
+     * @Route("/edit-image")
      */
-    public function imgEdit(Request $request) {
+    public function editImg(Request $request) {
 
         $user = $this->getUser();
-
-        dump($user);
 
         $em = $this->getDoctrine()->getManager();
         $originalImage = null;
 
-            /*if (is_null($user)) {
-                throw new NotFoundHttpException();
-            }*/
+        if(!is_null($user->getProfilImg())) {
+            $originalImage = $user->getProfilImg();
+            $user->setProfilImg(
+                new File($this->getParameter('upload_dir') . $originalImage)
+            );
+            dump("si image pas null");
+        }
 
-            if (!is_null($user->getProfilImg())) {
-                // nom du fichier en bdd
-                $originalImage = $user->getProfilImg();
-                $user->setProfilImg(
-                    new File($this->getParameter('upload_dir') . $originalImage)
-                );
-            }
-
-        $form = $this->createForm(InscriptionType::class, $user);
-
+        $form = $this->createForm(ImgType::class, $user);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted()) {
-            if ($form->isValid()) {
-                /** @var UploadedFile|null */
-                $image = $user->getProfileImg();
+        if($form->isSubmitted()) {
+            if($form->isValid()) {
+                $image = $user->getProfilImg();
 
-                // s'il y a eu une image uploadée
-                if (!is_null($image)) {
-                    // nom du fichier que l'on va enregistrer
+                if(!is_null($image)) {
                     $filename = uniqid() . '.' . $image->guessExtension();
 
                     $image->move(
-                    // répertoire de destination
-                    // cf config/services.yaml
-                        $this->getParameter('upload_dir'),
-                        $filename
+                        $this->getParameter('upload_dir'), $filename
                     );
+                    dump('si image pas null, bouge dans le dossier');
 
-                    // on sette l'image avec le nom qu'on lui a donné
                     $user->setProfilImg($filename);
 
-                    // suppression de l'ancienne image de l'article
-                    // s'il on est en modification d'un article qui en avait
-                    // déjà une
-                    if (!is_null($originalImage)) {
+                    if(!is_null($originalImage)) {
                         unlink($this->getParameter('upload_dir') . $originalImage);
+                        dump('si pas null original, supprime');
                     }
-                } else {
-                    // sans upload, on garde l'ancienne image
+                }
+                else {
                     $user->setProfilImg($originalImage);
+                    dump('remettre ancinne photo');
                 }
 
                 $em->persist($user);
                 $em->flush();
 
-                $this->addFlash('success', "L'article est enregistré");
-                return $this->redirectToRoute('app_admin_article_index');
+                $this->addFlash('succes', 'La photo a été modifiée');
+                return $this->redirectToRoute('app_profil_index');
             } else {
-                $this->addFlash(
-                    'error',
-                    'Le formulaire contient des erreurs'
-                );
+                $this->addFlash('error', 'il y des erreurs');
             }
         }
-
 
         return $this->render(
             'logged/img-edit.html.twig',
@@ -154,47 +141,28 @@ class ProfilController extends Controller
 
     /**
      * @param Request $request
-     * @Route("/edit/name")
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/edit-name")
      */
-    public function nameEdit(Request $request) {
+    public function editName(Request $request) {
 
         $user = $this->getUser();
 
-        dump($user);
-
         $em = $this->getDoctrine()->getManager();
 
-        if (is_null($user->getId())) { // création
-            $user = new User();
-        } else { // modification
-            $user = $em->find(User::class, $user->getId());
-
-            // 404 si l'id reçu dans l'URL n'existe pas en bdd
-            if (is_null($user)) {
-                throw new NotFoundHttpException();
-            }
-        }
-
-        $form = $this->createForm(InscriptionType::class, $user);
-        // le formulaire analyse la requête HTTP
+        $form = $this->createForm(NameType::class, $user);
         $form->handleRequest($request);
-
+dump($user);
         if($form->isSubmitted()) {
+
             if($form->isValid()) {
+
                 $em->persist($user);
                 $em->flush();
 
-                $this->addFlash(
-                    'success',
-                    'La catégorie est enregistrée'
-                );
-
-                return $this->redirectToRoute('app_admin_category_index');
+                $this->addFlash('succes', 'Le changement a été pris en compte');
             } else {
-                $this->addFlash(
-                    'error',
-                    'Le formulaire contient des erreurs'
-                );
+                $this->addFlash('error', 'Le formulaire contient des erreurs');
             }
         }
 
@@ -205,6 +173,166 @@ class ProfilController extends Controller
                 'user' => $user
             ]
         );
+    }
+
+    /**
+     * @param Request $request
+     * @Route("/edit-email")
+     */
+    public function editEmail(Request $request) {
+
+        $user = $this->getUser();
+        $em = $this->getDoctrine()->getManager();
+
+        $form = $this->createForm(EmailType::class, $user);
+        $form->handleRequest($request);
+
+        if(($form->isSubmitted()) && ($form->isValid())) {
+
+            $em->persist($user);
+            $em->flush();
+
+            $this->addFlash('succes', "L'email a été modifié");
+        }
+
+        return $this->render(
+            'logged/email-edit.html.twig',
+            [
+                'form' => $form->createView(),
+                'user' => $user
+            ]
+        );
+    }
+
+    /**
+     * @Route("/edit-age")
+     */
+    public function editAge(Request $request) {
+
+        $user = $this->getUser();
+
+        $em = $this->getDoctrine()->getManager();
+
+        $form = $this->createForm(AgeType::class, $user);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted()) {
+
+            if($form->isValid()) {
+
+                $em->persist($user);
+                $em->flush();
+
+                $this->addFlash('succes', "L'age a été modifié");
+
+            } else {
+                $this->addFlash('error', 'Erreur');
+            }
+        }
+
+        return $this->render(
+            'logged/age-edit.html.twig',
+            [
+                'form' => $form->createView(),
+                'user' => $user
+            ]
+        );
+    }
+
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/edit-date")
+     */
+    public function editDate(Request $request) {
+
+        $user = $this->getUser();
+
+        $em = $this->getDoctrine()->getManager();
+
+        $form = $this->createForm(DispoType::class, $user);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted()) {
+
+            if($form->isValid()) {
+
+                $em->persist($user);
+                $em->flush();
+
+                $this->addFlash('succes', "L'age a été modifié");
+            } else {
+
+                $this->addFlash('error', 'Erreur');
+            }
+        }
+
+        return $this->render(
+            'logged/date-edit.html.twig',
+            [
+                'form' => $form->createView(),
+                'user' => $user
+            ]
+        );
+    }
+
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/edit-activites")
+     */
+    public function editActivities(Request $request) {
+
+        $user = $this->getUser();
+
+        $em = $this->getDoctrine()->getManager();
+
+        $form = $this->createForm(ActivityType::class, $user);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted()) {
+
+            if($form->isValid()) {
+
+                $em->persist($user);
+                $em->flush();
+
+                $this->addFlash('succes', "modification enregistrée");
+
+            } else {
+
+                $this->addFlash('error', 'Erreur');
+            }
+        }
+
+        return $this->render(
+            'logged/activities-edit.html.twig',
+            [
+                'form' => $form->createView(),
+                'users' => $user
+            ]
+        );
+    }
+
+    /**
+     * @param User $user
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Route("/delete/{id}")
+     */
+    public function delete(User $user) {
+
+        $user = $this->getUser();
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($user);
+        $em->flush();
+
+        $this->addFlash(
+            'success',
+            'votre compte est supprimé'
+        );
+
+        return $this->redirectToRoute('app_index_index');
     }
 
 }

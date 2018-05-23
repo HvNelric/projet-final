@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Form\FormTypeInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -43,7 +44,7 @@ class User implements UserInterface, \Serializable
 
     /**
      * @ORM\Column(type="string", length=255, unique=true)
-     * @Assert\NotBlank(message="L'email est obligatoire")
+     * @Assert\NotBlank(message="L'email est obligatoire", groups={"inscription"})
      * @Assert\Email(message="Cet email n'est pas valide")
      */
     private $email;
@@ -55,7 +56,7 @@ class User implements UserInterface, \Serializable
 
     /**
      * @var string
-     * @Assert\NotBlank(message="Le mot de passe est obligation")
+     * @Assert\NotBlank(message="Le mot de passe est obligation", groups={"inscription"})
      */
     private $plainPassword;
 
@@ -74,7 +75,7 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(type="string", length=20)
      * Validation :
      *  -non vide
-     * @Assert\NotBlank(message="Le nom est obligatoire")
+     * @Assert\NotBlank(message="Le nom est obligatoire", groups={"inscription"})
      *  -nombre de caractères
      * @Assert\Length(max="20", maxMessage="Le nom ne doit pas dépasser {{ limit }} caractères")
      */
@@ -93,12 +94,16 @@ class User implements UserInterface, \Serializable
     /**
      * @var \DateTime
      * @ORM\Column(type="date")
+     * @Assert\NotBlank(message="vous devez choisir une date", groups={"inscription"})
+     * @Assert\Type("\DateTime")
      */
     private $date_dispo;
 
     /**
      * @var \DateTime
      * @ORM\Column(type="date")
+     * @Assert\NotBlank(message="vous devez choisir une date", groups={"inscription"})
+     * @Assert\Type("\DateTime")
      */
     private $date_fin;
 
@@ -138,7 +143,7 @@ class User implements UserInterface, \Serializable
         return $this->email;
     }
 
-    public function setEmail(string $email): self
+    public function setEmail($email): self
     {
         $this->email = $email;
 
@@ -150,7 +155,7 @@ class User implements UserInterface, \Serializable
         return $this->password;
     }
 
-    public function setPassword(string $password): self
+    public function setPassword($password): self
     {
         $this->password = $password;
 
@@ -162,7 +167,7 @@ class User implements UserInterface, \Serializable
         return $this->sexe;
     }
 
-    public function setSexe(string $sexe): self
+    public function setSexe($sexe): self
     {
         $this->sexe = $sexe;
 
@@ -174,7 +179,7 @@ class User implements UserInterface, \Serializable
         return $this->prenom;
     }
 
-    public function setPrenom(string $prenom): self
+    public function setPrenom($prenom): self
     {
         $this->prenom = $prenom;
 
@@ -186,7 +191,7 @@ class User implements UserInterface, \Serializable
         return $this->nom;
     }
 
-    public function setNom(string $nom): self
+    public function setNom($nom): self
     {
         $this->nom = $nom;
 
@@ -221,7 +226,7 @@ class User implements UserInterface, \Serializable
      * @param ArrayCollection $region
      * @return User
      */
-    public function setRegion(ArrayCollection $region) :User
+    public function setRegion($region) :User
     {
         $this->region = $region;
         return $this;
@@ -231,7 +236,7 @@ class User implements UserInterface, \Serializable
      * @param ArrayCollection $reservation
      * @return User
      */
-    public function setReservation(ArrayCollection $reservation): User
+    public function setReservation($reservation): User
     {
         $this->reservation = $reservation;
         return $this;
@@ -248,7 +253,7 @@ class User implements UserInterface, \Serializable
     /**
      * @param string $role
      */
-    public function setRole(string $role): self
+    public function setRole($role): self
     {
         $this->role = $role;
         return $this;
@@ -338,7 +343,7 @@ class User implements UserInterface, \Serializable
      * @param string $plainPassword
      * @return User
      */
-    public function setPlainPassword(string $plainPassword): User
+    public function setPlainPassword($plainPassword): User
     {
         $this->plainPassword = $plainPassword;
         return $this;

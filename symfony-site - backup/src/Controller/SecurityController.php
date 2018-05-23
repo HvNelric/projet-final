@@ -42,7 +42,6 @@ class SecurityController extends Controller
                     );
 
                     $user->setProfilImg($filename);
-
                 }
 
                 $password = $passwordEncoder->encodePassword(

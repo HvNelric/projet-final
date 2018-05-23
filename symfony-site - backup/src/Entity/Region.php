@@ -4,9 +4,12 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\RegionRepository")
+ * @UniqueEntity(fields="region", message="il existe déjà une region de ce nom")
  */
 class Region
 {
@@ -18,12 +21,17 @@ class Region
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, unique=true)
+     * Validation :
+     * -non vide
+     * * @Assert\NotBlank(message="Le nom est obligatoire")
+     * - nombre de caractères
+     * @Assert\Length(max="255", maxMessage="Le nom ne doit pas dépasser {{ limit }} caractères")
      */
     private $region;
 
     /**
-     * @var ArrayCollection
+     * var ArrayCollection
      * @ORM\OneToMany(targetEntity="App\Entity\Sejour", mappedBy="region_sejour")
      */
     private $sejour_region;
@@ -44,37 +52,26 @@ class Region
         return $this->id;
     }
 
-    /**
-     * @return mixed
-     */
     public function getRegion()
     {
         return $this->region;
     }
 
-    /**
-     * @param mixed $region
-     * @return Region
-     */
+
     public function setRegion($region)
     {
         $this->region = $region;
         return $this;
     }
 
-    /**
-     * @return ArrayCollection
-     */
+
     public function getUserRegion()
     {
         return $this->user_region;
     }
 
-    /**
-     * @param ArrayCollection $user_region
-     * @return Region
-     */
-    public function setUserRegion(ArrayCollection $user_region)
+
+    public function setUserRegion($user_region)
     {
         $this->user_region = $user_region;
         return $this;
@@ -85,19 +82,14 @@ class Region
         $this->user_region->add($user_region);
     }
 
-    /**
-     * @return ArrayCollection
-     */
+
     public function getSejourRegion()
     {
         return $this->sejour_region;
     }
 
-    /**
-     * @param ArrayCollection $sejour_region
-     * @return Region
-     */
-    public function setSejourRegion(ArrayCollection $sejour_region): Region
+
+    public function setSejourRegion($sejour_region): Region
     {
         $this->sejour_region = $sejour_region;
         return $this;
