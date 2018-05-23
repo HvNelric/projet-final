@@ -4,8 +4,20 @@ import '../css/users-index.css';
 import profil01 from '../img/img-users/user-01.jpg';
 
 class UsersIndex extends Component{
+    envoi une requete à http://localhost:8000/users
+
     render() {
         return(
+
+
+
+
+
+
+
+
+
+
             <div className="container-fluid users-index">
                 <div className="container">
                     <h2 className="text-center text-light">Ces utilisateurs sont peut-être vos compagnons d’aventure</h2>
