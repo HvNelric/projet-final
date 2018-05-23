@@ -64,18 +64,13 @@ class Region
         return $this;
     }
 
-    /**
-     * @return ArrayCollection
-     */
+
     public function getUserRegion()
     {
         return $this->user_region;
     }
 
-    /**
-     * @param ArrayCollection $user_region
-     * @return Region
-     */
+
     public function setUserRegion($user_region)
     {
         $this->user_region = $user_region;
@@ -87,18 +82,13 @@ class Region
         $this->user_region->add($user_region);
     }
 
-    /**
-     * @return ArrayCollection
-     */
+
     public function getSejourRegion()
     {
         return $this->sejour_region;
     }
 
-    /**
-     * @param ArrayCollection $sejour_region
-     * @return Region
-     */
+
     public function setSejourRegion($sejour_region): Region
     {
         $this->sejour_region = $sejour_region;

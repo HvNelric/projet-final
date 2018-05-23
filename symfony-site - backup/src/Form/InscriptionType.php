@@ -10,6 +10,7 @@ use Symfony\Component\DomCrawler\Field\ChoiceFormField;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -157,11 +158,12 @@ class InscriptionType extends AbstractType
                 )
             ->add(
                 'profil_img',
-                FileType::class,
-                [
-                    'label' => 'Votre photo de profil : ',
-                    'required' => false
-                ]
+                    FileType::class,
+                        [
+                            'label' => 'Photo de profil',
+                            'required' => false
+                        ]
+
             )
         ;
     }
@@ -170,6 +172,9 @@ class InscriptionType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => User::class,
+            'validation_groups' => [
+                'inscription'
+            ]
         ]);
     }
 }
