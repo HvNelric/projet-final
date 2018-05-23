@@ -1,0 +1,57 @@
+{# logged/index.html.twig #}
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="text-center text-info mt-5">Profil de {{userLogged.prenom  }}</h1>
+        <div class="row p-5">
+            <div class="col-12">
+                <a href="{{ path('app_profil_editimg') }}">
+                    <img class="img-fluid" src="{{ asset('profil-img/' ~ userLogged.getProfilImg) }}" alt="" />
+                </a>
+                <a class="btn btn-info text-right mt-2" href="{{ path('app_profil_editimg') }}">
+                    Changer de photo
+                </a>
+            </div>
+            </div>
+            <div class="col-12">
+                <h4 class="mt-3">{{ userLogged.prenom }} {{ userLogged.nom }}</h4>
+                <a class="btn btn-info" href="{{ path('app_profil_editname') }}">Modifier</a>
+                <p class="mt-3">email : {{ userLogged.email }}</p>
+                <a class="btn btn-info" href="{{ path('app_profil_editemail') }}">modifier l'email</a>
+                <p class="mt-3">age : {{ userLogged.age }} <a class="btn btn-info" href="{{ path('app_profil_editage') }}">modifier l'age</a></p>
+                <p class="mt-3">Disponibilité : du <span class="text-info">{{ userLogged.getDateDispo|date('d/m/Y') }}</span> au <span class="text-info">{{ userLogged.DateFin|date('d/m/Y') }}</span>
+                    <a class="btn btn-info" href="{{ path('app_profil_editdate') }}">modifier les dates</a>
+                </p>
+            </div>
+            <div class="col-12 p-5">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Activités : </th>
+                            {% for activity in userLogged.activites %}
+                                <td>{{ activity.name }}</td>
+                            {% endfor %}
+                                <td>
+                                    <a class="btn btn-info" href="{{ path('app_profil_editactivities') }}">modifier vos activités</a>
+                                </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Régions : </th>
+                            {% for region in userLogged.region %}
+                                <td>{{ region.region }}</td>
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    <div class="form-btn-group text-right">
+        <a href="{{ path('app_profil_delete', {id: userLogged.id}) }}" class="btn btn-danger mt-4">
+            Supprimer le compte
+        </a>
+
+    </div>
+    {{ dump(userLogged) }}
+    </div>
+{% endblock %}
