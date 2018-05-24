@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
- *
+ * Utilisateur
  * @ApiResource()
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  * @UniqueEntity(fields="email", message="Il existe déjà un utilisateur avec cet email")
