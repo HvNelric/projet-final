@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Sejour;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,7 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
  * Class SejourController
- * @Route("/sejour")
+ * @Route("/sejours")
  */
 class SejourController extends Controller
 {
@@ -24,12 +25,18 @@ class SejourController extends Controller
         $repository = $em->getRepository(Sejour::class);
         $sejours = $repository->findAll();
 
-        return $this->render(
-            'sejour/index.html.twig',
-            [
-                'sejours' => $sejours
-            ]
-        );
+        $json = [];
+
+        foreach( $sejours as $sejour) {
+            $sejour_tab = [
+                'ville' => $sejour->getVille(),
+                'image' => $sejour->getVilleImg(),
+                'desc' => $sejour->getDescription()
+            ];
+            $json[] = $sejour_tab;
+        }
+
+        return new JsonResponse($json);
     }
 
     /**
