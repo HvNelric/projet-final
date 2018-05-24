@@ -11,7 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
  * Class SejourController
- * @Route("/sejours")
+ * @Route("/sejour")
  */
 class SejourController extends Controller
 {
@@ -48,14 +48,17 @@ class SejourController extends Controller
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository(Sejour::class, $id);
         $sejour = $repository->find($id);
-dump($id);
-dump($sejour);
-        return $this->render(
-            'sejour/detail.html.twig',
-            [
-                'sejour' => $sejour
-            ]
-        );
+
+        dump($sejour);
+
+        return new JsonResponse($sejour);
+
+//        return $this->render(
+//            'sejour/detail.html.twig',
+//            [
+//                'sejour' => $sejour
+//            ]
+//        );
 
     }
 }

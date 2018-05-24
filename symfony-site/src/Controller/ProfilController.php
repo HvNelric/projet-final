@@ -20,6 +20,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
  * Class ProfilController
@@ -46,8 +47,6 @@ class ProfilController extends Controller
             ->setParameter('id', $userId);*/
 
 
-
-
        /* $activities = $qb->getQuery()->getResult(); //->getSingleScalarResult()
 
         dump($activities);*/
@@ -68,11 +67,11 @@ class ProfilController extends Controller
         $activities = $repository->find('1');*/
 
 
-        return $this->render('logged/index.html.twig',
-            [
-                'userLogged' => $userLogged
-            ]
-        );
+//        return $this->render('logged/index.html.twig',
+//            [
+//                'userLogged' => $userLogged
+//            ]
+//        );
     }
 
     /**

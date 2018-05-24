@@ -2,11 +2,18 @@
 
 namespace App\Controller;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use App\Entity\User;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
+/**
+ * @ApiResource()
+ * Class UserController
+ * @package App\Controller
+ *
+ */
 class UserController extends Controller
 {
     /**
@@ -71,5 +78,23 @@ class UserController extends Controller
         dump($json);
         return new JsonResponse($json);
 
+    }
+
+    /**
+     * @Route("/userlogged")
+     */
+    public function userLogged() {
+
+        $userLogged = $this->getUser();
+
+        $json = [
+            $user_tab = [
+                'id' => $userLogged->getId(),
+                'prenom' => $userLogged->getPrenom(),
+                'image' => $userLogged->getProfilImg()
+            ]
+        ];
+
+        return new JsonResponse($json);
     }
 }

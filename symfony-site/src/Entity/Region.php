@@ -2,12 +2,15 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
+use ApiPlatform\Core\Api;
 
 /**
+ * @ApiResource()
  * @ORM\Entity(repositoryClass="App\Repository\RegionRepository")
  * @UniqueEntity(fields="region", message="il existe déjà une region de ce nom")
  */
