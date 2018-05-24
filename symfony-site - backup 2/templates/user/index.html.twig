@@ -1,0 +1,68 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block content %}
+
+    <style>
+        .users-index{
+            background: black;
+            padding: 5rem 0;
+        }
+
+        .user-img{
+            width: 8rem;
+            height: 8rem;
+            border-radius: 0.8rem 0 0 0.8rem;
+            background: var(--bg1);
+            overflow: hidden;
+            border: 2px solid #fff;
+        }
+
+        .user-img img{
+            width: 100%;
+        }
+
+        .user-content{
+            position: relative;
+        }
+
+        .user-lastname, .user-destination, .user-comment{
+            padding: 0.2rem 1rem;
+            margin: 0 0 0.9rem 0;
+            background: white;
+            display: inline-block;
+            border-radius: 0 1rem 1rem 0;
+        }
+
+        p.user-destination, p.user-comment{
+            display: block;
+        }
+
+        .user-comment{
+            margin: 0;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+
+    <div class="container">
+        <div class="row users-index">
+            {% for user in users %}
+            <div class="col-6 col-md-4 mt-4">
+                <div class="user-container d-flex justify-content-start">
+                    <div class="user-img">
+                        <img class="img-fluid" src="{{ asset('profil-img/' ~ user.profilImg) }}" alt="image du profil" />
+                    </div>
+                    <div class="user-content">
+                        <h5 class="user-lastname">{{ user.prenom }}</h5>
+                        <p class="user-destination"><span>Date : </span>{{ user.dateDispo|date('d/m/Y') }}</p>
+                        <p class="user-comment">bla bla</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {{ test }}
+    </div>
+{% endblock %}

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../react-site/.idea/react-site.iml" filepath="$PROJECT_DIR$/../react-site/.idea/react-site.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/symfony-site.iml" filepath="$PROJECT_DIR$/.idea/symfony-site.iml" />
     </modules>
   </component>
