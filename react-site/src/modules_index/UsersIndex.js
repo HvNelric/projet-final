@@ -10,7 +10,7 @@ class UsersIndex extends Component {
     }
 
     componentWillMount(){
-        axios.get(`http://localhost:8000/user`) //Get data from the randomuser URL. A custom ChatID is created based on the two profils ID value
+        axios.get(`http://localhost:8000/user`) 
             .then( response => {
                 this.setState({
                     profils:response.data
