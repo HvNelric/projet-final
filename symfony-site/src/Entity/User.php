@@ -12,7 +12,11 @@ use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * Utilisateur
- * @ApiResource()
+ * @ApiResource(
+ *     attributes={
+ *     "filters"={"offer.date_filter"}
+ *     }
+ * )
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  * @UniqueEntity(fields="email", message="Il existe déjà un utilisateur avec cet email")
  */
@@ -26,6 +30,7 @@ class User implements UserInterface, \Serializable
     private $id;
 
     /**
+     *
      * @var ArrayCollection
      * @ORM\ManyToMany(targetEntity="App\Entity\Activites", inversedBy="user_activites")
      * @ORM\JoinTable(name="user_activites")
@@ -33,12 +38,14 @@ class User implements UserInterface, \Serializable
     private $activites;
 
     /**
+     *
      * @var ArrayCollection
      * @ORM\OneToMany(targetEntity="App\Entity\Reservation", mappedBy="user_reservation")
      */
     private $reservation;
 
     /**
+     *
      * @var ArrayCollection
      * @ORM\ManyToMany(targetEntity="App\Entity\Region", inversedBy="user_region")
      * @ORM\JoinTable(name="user_region")
@@ -46,6 +53,7 @@ class User implements UserInterface, \Serializable
     private $region;
 
     /**
+     *
      * @ORM\Column(type="string", length=255, unique=true)
      * @Assert\NotBlank(message="L'email est obligatoire", groups={"inscription"})
      * @Assert\Email(message="Cet email n'est pas valide")
@@ -69,12 +77,14 @@ class User implements UserInterface, \Serializable
     private $password;
 
     /**
+     *
      * @var string
      * @ORM\Column(type="string", length=20)
      */
     private $sexe;
 
     /**
+     *
      * @ORM\Column(type="string", length=20)
      * Validation :
      *  -non vide
@@ -85,16 +95,19 @@ class User implements UserInterface, \Serializable
     private $prenom;
 
     /**
+     *
      * @ORM\Column(type="string", length=20)
      */
     private $nom;
 
     /**
+     *
      * @ORM\Column(type="integer")
      */
     private $age;
 
     /**
+     *
      * @var \DateTime
      * @ORM\Column(type="date")
      * @Assert\NotBlank(message="vous devez choisir une date", groups={"inscription"})
@@ -103,6 +116,7 @@ class User implements UserInterface, \Serializable
     private $date_dispo;
 
     /**
+     *
      * @var \DateTime
      * @ORM\Column(type="date")
      * @Assert\NotBlank(message="vous devez choisir une date", groups={"inscription"})
@@ -111,6 +125,7 @@ class User implements UserInterface, \Serializable
     private $date_fin;
 
     /**
+     *
      * @var string
      * @ORM\Column(type="string", nullable=true)
      * Assert\Image(
