@@ -106,12 +106,11 @@ class UserController extends Controller
      */
     public function test(Request $request)
     {
-        //$data = $request->request->all();
+        $data = $request->request->all();
 
-        $data = $request->();
         dump($request);
 
-        return $data;
+        return new JsonResponse($data);
 
 //        $truc = new chin();
 //
