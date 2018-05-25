@@ -89,7 +89,31 @@ class GroupsIndex extends Component{
                                 </div> {/* /Group-users-container */}
                             </div> {/* /Group-container */}
                         </div>
-                        
+                        <div className="col-6">
+                            <div className="group-container"> {/* Group-container */}
+                                <div className="group-arrow-container">
+                                    <div className="group-arrow">
+                                        <h5 className="text-light m-0">St Maxime</h5>
+                                    </div>
+                                    <div className="triangle-down"></div>
+                                </div>
+                                <img src={group01} alt=""></img>
+                                <div className="group-users-container"> {/* Group-users-container */}
+                                    <div className="group-user-img">
+                                        <img src={profil01} alt=""/>
+                                    </div>
+                                    <div className="group-user-img">
+                                        <img src={profil01} alt=""/>
+                                    </div>
+                                    <div className="group-user-img">
+                                        <img src={profil01} alt=""/>
+                                    </div>
+                                    <div className="group-user-img">
+                                        <img src={profil01} alt=""/>
+                                    </div>
+                                </div> {/* /Group-users-container */}
+                            </div> {/* /Group-container */}
+                        </div>
                     </div>
                 </div>
             </div>

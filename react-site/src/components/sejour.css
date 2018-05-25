@@ -1,0 +1,36 @@
+.test {
+    margin-top: 10px;
+}
+
+.entete {
+    background-image: url('../images/image2.jpg');
+    background-size: cover;
+    height: 250px;
+}
+
+
+.titre {
+    color: blue;
+    margin-left:50px; 
+}
+
+
+
+#barrerecherche {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-color: rgb(39, 121, 82);
+    border-radius: 3cm;
+    
+    
+    
+}
+
+.titrePrincipal {
+    margin:auto;
+    color:blue;
+    font-size: 25px;
+    margin-left: 10cm;
+    margin-bottom: 1cm;
+}
+

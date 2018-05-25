@@ -12,6 +12,7 @@ class IndexController extends Controller
      */
     public function index()
     {
+
         $user = $this->getUser();
 dump($user);
         return $this->render(

@@ -1,0 +1,92 @@
+/*
+#175667
+#292255
+ */
+/******* Couleur ********/
+:root{
+  --btn: rgba(41,34,85,1);
+  --hover: rgb(59,35,106);
+  --vio2: rgb(69,40,125);
+  --vio3: rgb(116,26,152);
+  --vio4: rgb(145,37,164);
+  --vio5: rgb(185,59,193);
+  --blue1: rgb(32,176,231);
+  --blue2: rgb(186,202,233);
+  --bg1: #f1f1f1;
+  --bg2: rgb(252,250,245);
+}
+
+body{
+  font-size: 0.9rem;
+}
+
+h1, h2, h3, h3, h4, h5{
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+h5{
+  font-size: 1.5em;
+}
+
+h4{
+  font-size: 2.1em;
+}
+
+h3{
+  font-size: 2.3em;
+}
+
+h2{
+  font-size: 2.5em;
+}
+
+p{
+  font-family: 'Merriweather', serif;
+  font-size: 0.9em !important;
+}
+
+.my-link{
+  color: var(--btn);
+}
+
+.my-link:hover{
+  color: var(--hover);
+}
+
+.my-btn{
+  background: var(--btn) !important;
+  border-color: var(--btn) !important;
+  color: #fff;
+}
+
+.my-btn:hover{
+  background: var(--hover) !important;
+  color: #fff;
+}
+
+/**************** NAV ********************/
+.my-navbar{
+  background: #292255 !important;
+  color: white;
+}
+
+#logo {
+  height: 2rem;
+}
+
+.my-navlink:hover {
+  color: var(--blue1) !important;
+}
+
+.my-input{
+  height: 1.5rem;
+}
+
+.btn-cnx{
+  padding: 0 0.5rem;
+}
+
+.btn-cnx:hover{
+  background: none !important;
+  color: var(--blue1);
+}

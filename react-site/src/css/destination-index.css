@@ -1,0 +1,21 @@
+.destinations-container{
+    background: var(--bg1);
+    padding-top: 5rem !important;
+}
+
+.row-destinations-index{
+	padding-bottom: 5rem !important;
+}
+
+.my-card{
+	margin-top: 2rem;
+	transition: all 200ms ease-in-out;
+}
+
+.my-card:hover{
+	transition: all 200ms ease-in-out;
+
+	-webkit-box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.26);
+	-moz-box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.26);
+	box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.26);
+}

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Entity\User;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -23,14 +24,17 @@ class UserController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository(User::class);
-        $users = $repository->findall();
+        $users = $repository->findAll();
+
+
 
         $json = [];
         foreach( $users as $user) {
             $user_tab = ['id' => $user->getId(),
                 'nom' => $user->getNom(),
                 'prenom' => $user->getPrenom(),
-                'age' => $user->getAge()
+                'age' => $user->getAge(),
+                'image' => $user->getProfilImg()
             ];
             $json[] = $user_tab;
         }
@@ -65,7 +69,7 @@ class UserController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository(User::class);
-        $user = $repository->find($id);
+        $user = $repository->findAll();
 
         $json = [
             'id' => $user->getId(),
@@ -95,5 +99,22 @@ class UserController extends Controller
         ];
 
         return new JsonResponse($json);
+    }
+
+    /**
+     * @Route("/test")
+     */
+    public function test(Request $request)
+    {
+        //$data = $request->request->all();
+
+        $data = $request->();
+        dump($request);
+
+        return $data;
+
+//        $truc = new chin();
+//
+//        $truc->setChoes($data['gfref']);
     }
 }

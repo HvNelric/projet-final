@@ -5,7 +5,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import ModulesIndex from './components/ModulesIndex';
 import NavbarMod from './components/NavbarMod';
 import Header from './components/Header';
-import Sejour from './components/Sejour';
+import Sejours from './components/Sejours';
 import User from './components/User';
 import Inscription from './components/Inscription';
 import Connexion from './components/Connexion';
@@ -19,7 +19,7 @@ class App extends Component {
               <NavbarMod />
               <Switch>
                 <Route path="/" exact component={ModulesIndex} />
-                <Route path="/sejour" exact component={Sejour} />
+                <Route path="/sejour" exact component={Sejours} />
                 <Route path="/user" exact component={User} />
                 <Route path="/Inscription" exact component={Inscription} />
                 <Route path="/Connexion" exact component={Connexion} />

@@ -10,10 +10,10 @@ const AffichageProf = (props) => {
 
                 <div className="col-6 col-md-4 mt-4" key={index}>
                     <div className="user-container d-flex justify-content-start"> {/** User-container **/}
-                        <Link to='http://localhost:8000/user/{item.id}'>
-                        <div className="user-img">
-                            <img src="#" alt="image du profil"></img>
-                        </div>
+                        <Link to={`./user/${item.id}`}>
+                            <div className="user-img">
+                                <img src={`http://localhost:8000/profil-img/${item.image}`} alt="image du profil"></img>
+                            </div>
                         </Link>
                         <div className="user-content">
                             <h5 className="user-lastname">{item.prenom}</h5>

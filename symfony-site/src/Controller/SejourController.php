@@ -25,13 +25,22 @@ class SejourController extends Controller
         $repository = $em->getRepository(Sejour::class);
         $sejours = $repository->findAll();
 
+        dump($sejours);
+
         $json = [];
 
         foreach( $sejours as $sejour) {
             $sejour_tab = [
                 'ville' => $sejour->getVille(),
                 'image' => $sejour->getVilleImg(),
-                'desc' => $sejour->getDescription()
+                'desc' => $sejour->getDescription(),
+                'prix' => $sejour->getPrix(),
+                'date_depart' => $sejour->getDateDepart(),
+                'hebergement' => $sejour->getHebergement(),
+                'transport' => $sejour->getTransport(),
+                'duree' => $sejour->getDuree(),
+                'activite' =>$sejour->getActivitesSejour(),
+                'region'=> $sejour->getRegionSejour()
             ];
             $json[] = $sejour_tab;
         }
@@ -51,7 +60,20 @@ class SejourController extends Controller
 
         dump($sejour);
 
-        return new JsonResponse($sejour);
+        $json = [
+            'ville' => $sejour->getVille(),
+            'image' => $sejour->getVilleImg(),
+            'desc' => $sejour->getDescription(),
+            'prix' => $sejour->getPrix(),
+            'date_depart' => $sejour->getDateDepart(),
+            'hebergement' => $sejour->getHebergement(),
+            'transport' => $sejour->getTransport(),
+            'duree' => $sejour->getDuree(),
+            'activite' =>$sejour->getActivitesSejour(),
+            'region'=> $sejour->getRegionSejour()
+        ];
+
+        return new JsonResponse($json);
 
 //        return $this->render(
 //            'sejour/detail.html.twig',

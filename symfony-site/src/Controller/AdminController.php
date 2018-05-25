@@ -7,6 +7,7 @@ use App\Entity\Region;
 use App\Entity\Sejour;
 use App\Form\ActivitesType;
 use App\Form\SejourType;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
@@ -91,6 +92,8 @@ class AdminController extends Controller
             ]
         );
     }
+
+
 
     /**
      * @param Request $request

@@ -45,6 +45,7 @@
     background: #fff;
     border: 2px solid #fff;
     height: 6rem;
+    overflow: hidden;
 }
 
 .group-user-img{

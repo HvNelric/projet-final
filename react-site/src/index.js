@@ -7,13 +7,13 @@ import Routes from './Routes';
 
 import { BrowserRouter } from 'react-router-dom';
 
-    const App = (props) =>{
-        return(
-            <BrowserRouter>
-                <Routes {...props} />
-            </BrowserRouter>
-        )
-    }
+const App = (props) =>{
+    return(
+        <BrowserRouter>
+            <Routes {...props} />
+        </BrowserRouter>
+    )
+}
 
 ReactDOM.render(<App/>, document.getElementById('root'));
 // registerServiceWorker();
