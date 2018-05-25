@@ -98,7 +98,8 @@ class User extends Component {
 
         if(formIsValid){
             console.log('data',dataToSubmit)
-            axios.post('http://localhost:8000/test', dataToSubmit,{headers: {
+            axios.post('http://localhost:8000/test', dataToSubmit,
+                {headers: {
                 "Content-Type": "application/json"}
             })
             // axios({

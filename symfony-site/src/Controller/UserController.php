@@ -2,18 +2,11 @@
 
 namespace App\Controller;
 
-use ApiPlatform\Core\Annotation\ApiResource;
 use App\Entity\User;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
-
-use Symfony\Component\Serializer\Serializer;
-use Symfony\Component\Serializer\Encoder\XmlEncoder;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\SerializerInterface;
 
 
 /**
@@ -113,16 +106,18 @@ class UserController extends Controller
      */
     public function test(Request $request)
     {
-        $data = $request->request->all();
 
-        ///dump($data);
+        $postJson = json_decode($request->getContent());
+        dump($postJson);
+        $json = [
+            'name' => $postJson->name,
+            'lastname' => $postJson->lastname,
+            'msg' => $postJson->message,
+            'age' => $postJson->age,
+        ];
 
-        //$person = $serializer->deserialize($data, Person::class, 'xml');
+        return new JsonResponse($json);
 
-        return new JsonResponse($data);
 
-//        $truc = new chin();
-//
-//        $truc->setChoes($data['gfref']);
     }
 }
