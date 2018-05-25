@@ -9,6 +9,13 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
+use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\Encoder\XmlEncoder;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\SerializerInterface;
+
+
 /**
  * Class UserController
  * @package App\Controller
@@ -108,7 +115,9 @@ class UserController extends Controller
     {
         $data = $request->request->all();
 
-        dump($request);
+        ///dump($data);
+
+        //$person = $serializer->deserialize($data, Person::class, 'xml');
 
         return new JsonResponse($data);
 
