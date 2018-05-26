@@ -228,4 +228,43 @@ class AdminController extends Controller
 
         return $this->redirectToRoute('app_admin_index');
     }
+
+    /**
+     * @Route("/add-activite-r")
+     */
+    public function addActivityR()
+    {
+        if ($request->isMethod('POST')) {
+            echo 'ok';
+
+            $data = $request->getContent();
+            dump($data);
+
+            //$data = $request->request->all();
+            $postJson = json_decode($request->getContent());
+            $json = [
+                'activity' => $postJson->activity
+            ];
+
+            $activity = new Activites();
+
+            $activity->setName($json['activity']);
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($activity);
+            $em->flush();
+
+            $message = [
+              'msg' => 'OK'
+            ];
+
+            return new JsonResponse($message);
+        }
+
+        $message = [
+           'msg' => 'NOT OK'
+        ];
+        return new JsonResponse($message);
+    }
+
 }

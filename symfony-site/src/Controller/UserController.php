@@ -108,16 +108,12 @@ class UserController extends Controller
     {
 
         $postJson = json_decode($request->getContent());
-        dump($postJson);
+
         $json = [
-            'name' => $postJson->name,
-            'lastname' => $postJson->lastname,
-            'msg' => $postJson->message,
-            'age' => $postJson->age,
+            'email' => $postJson->email,
+            'pwd' => $postJson->password
         ];
 
-        return new JsonResponse($json);
-
-
+        return $postJson;
     }
 }

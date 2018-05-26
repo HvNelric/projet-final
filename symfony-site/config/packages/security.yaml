@@ -33,6 +33,11 @@ security:
                 path: app_security_logout
                 target: app_index_index
 
+            json_login:
+                check_path: /loginr
+                # username_path: security.credentials.login
+                # password_path: security.credentials.password
+
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
