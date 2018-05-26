@@ -26,15 +26,16 @@ security:
             provider: db
             pattern: ^/
             form_login:
-                login_path: app_security_login
+                login_path: app_security_loginr
                 check_path: app_security_login
                 default_target_path: app_index_index
             logout:
                 path: app_security_logout
                 target: app_index_index
-
             json_login:
-                check_path: /loginr
+                check_path: app_security_loginr
+
+
                 # username_path: security.credentials.login
                 # password_path: security.credentials.password
 

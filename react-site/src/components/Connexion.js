@@ -6,41 +6,41 @@ class User extends Component {
 
     state = {
         formData:{
-            activity:{
+            email:{
                 element:'input',
                 value:'',
                 label:true,
-                labelText:'Email',
+                labelText:'Email : ',
                 config:{
-                    name:'activity',
-                    type:'text',
+                    name:'_username',
+                    type:'email',
                     placeholder:''
                 },
                 validation:{
                     required:true,
                     minLen:2
                 },
-                valid:false,
-                touched:false,
+                valid:true,
+                touched:true,
                 validationMessage:'Vous devez entrer une adresse mail valide'
             },
-            // password:{
-            //     element:'input',
-            //     value:'',
-            //     label:true,
-            //     labelText:'Mot de passe',
-            //     config:{
-            //         name:'_password',
-            //         type:'password',
-            //         placeholder:'Entrer votre mot de passe'
-            //     },
-            //     validation:{
-            //         required:true
-            //     },
-            //     valid:false,
-            //     touched:false,
-            //     validationMessage:''
-            // },
+            password:{
+                element:'input',
+                value:'',
+                label:true,
+                labelText:'Mot de passe : ',
+                config:{
+                    name:'_password',
+                    type:'password',
+                    placeholder:''
+                },
+                validation:{
+                    required:true
+                },
+                valid:false,
+                touched:false,
+                validationMessage:''
+            },
             // message:{
             //     element:'textarea',
             //     value:'',
@@ -98,7 +98,7 @@ class User extends Component {
 
         if(formIsValid){
             console.log('data',dataToSubmit)
-            axios.post('http://localhost:8000/test', dataToSubmit,
+            axios.post('http://localhost:8000/loginr', dataToSubmit,
                 {headers: {
                 "Content-Type": "application/json"}
             })
