@@ -339,4 +339,25 @@ dump($user);
         return $this->redirectToRoute('app_index_index');
     }
 
+    /**
+     * @Route("/activites")
+     */
+    public function menuActivities()
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository(Activites::class);
+        $activities = $repo->findAll();
+
+        $json = [];
+        foreach($activities as $activity) {
+            $activity_tab = [
+                'region' => $activity->getName()
+            ];
+            $json[] = $activity_tab;
+        }
+
+        return new JsonResponse($json);
+    }
+
 }

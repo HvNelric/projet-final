@@ -71,7 +71,10 @@ class UserController extends Controller
             'id' => $user->getId(),
             'nom' => $user->getNom(),
             'prenom' => $user->getPrenom(),
-            'age' => $user->getAge()
+            'age' => $user->getAge(),
+            'image' => $user->getProfilImg(),
+            'dispo_d' => $user->getDateDispo(),
+            'dispo_f' => $user->getDateFin()
         ];
 
         return new JsonResponse($json);

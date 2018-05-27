@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import logo from '../img/logo.svg';
 
 import MenuRegionNav from './MenuRegionNav';
+import MenuActivityNav from "./MenuActivityNav";
 
 class NavbarMod extends Component {
     render() {
@@ -30,6 +31,15 @@ class NavbarMod extends Component {
                                             Régions
                                         </a>
                                         <MenuRegionNav />
+                                    </li>
+
+                                    <li className="nav-item dropdown">
+                                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                           role="button" data-toggle="dropdown" aria-haspopup="true"
+                                           aria-expanded="false">
+                                            Régions
+                                        </a>
+                                        <MenuActivityNav />
                                     </li>
 
                                     <li className="nav-item active">
