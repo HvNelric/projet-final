@@ -2,9 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Region;
 use App\Entity\Sejour;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -25,10 +27,11 @@ class SejourController extends Controller
         $repository = $em->getRepository(Sejour::class);
         $sejours = $repository->findAll();
 
-        dump($sejours);
+        if($this->isGranted('ROLE_ADMIN')) {
+            return new Response('ADMIN');
+        }
 
         $json = [];
-
         foreach( $sejours as $sejour) {
             $sejour_tab = [
                 'ville' => $sejour->getVille(),
@@ -81,6 +84,19 @@ class SejourController extends Controller
 //                'sejour' => $sejour
 //            ]
 //        );
+    }
+
+    /**
+     * @Route("/par-region")
+     */
+    public function SejourByRegion()
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository(Region::class);
+        $sejours = $repo->findAll();
+
+        dump($sejours);
 
     }
 }

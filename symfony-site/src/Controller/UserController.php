@@ -21,12 +21,9 @@ class UserController extends Controller
      */
     public function index()
     {
-
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository(User::class);
         $users = $repository->findAll();
-
-
 
         $json = [];
         foreach( $users as $user) {
@@ -38,7 +35,6 @@ class UserController extends Controller
             ];
             $json[] = $user_tab;
         }
-
         return new JsonResponse($json);
 
 
@@ -56,9 +52,9 @@ class UserController extends Controller
 //
 //        dump($jsonContent);
 
-//        return $this->render('user/index.html.twig', [
-//
-//        ]);
+       // return $this->render('user/index.html.twig', [
+
+        //]);
     }
 
     /**

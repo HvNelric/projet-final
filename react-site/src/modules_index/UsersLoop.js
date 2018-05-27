@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 
-const AffichageProf = (props) => {
+const UsersLoop = (props) => {
     console.log('prop',props.profils)
     return (
         props.profils.map((item, index)=>{
@@ -27,4 +27,4 @@ const AffichageProf = (props) => {
         }))
 }
 
-export default AffichageProf;
+export default UsersLoop;
