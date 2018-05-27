@@ -7,6 +7,7 @@ use App\Form\InscriptionType;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
@@ -18,61 +19,61 @@ use Symfony\Component\Serializer\Encoder\JsonDecode;
 class SecurityController extends Controller
 {
     /**
-     * Route("/inscription")
+     * @Route("/inscription")
      */
-//    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder)
-//    {
-//        $user = new User();
-//        $form = $this->createForm(InscriptionType::class, $user);
-//        $form->handleRequest($request);
-//
-//
-//        if($form->isSubmitted()) {
-//            if ($form->isValid()) {
-//
-//                /**
-//                 * @var UploadedFile|null
-//                 */
-//                $image = $user->getProfilImg();
-//
-//                if(!is_null($image)) {
-//
-//                    $filename = uniqid() . '.' . $image->guessExtension();
-//
-//                    $image->move(
-//                        $this->getParameter('upload_dir'),
-//                        $filename
-//                    );
-//
-//                    $user->setProfilImg($filename);
-//                }
-//
-//                $password = $passwordEncoder->encodePassword(
-//                    $user,
-//                    $user->getPlainPassword()
-//                );
-//                $user->setPassword($password);
-//                dump($user);
-//
-//                $em = $this->getDoctrine()->getManager();
-//                $em->persist($user);
-//                $em->flush();
-//
-//                $this->addFlash('succes', 'Votre compte est crée');
-//                return $this->redirectToRoute('app_index_index');
-//
-//            } else {
-//                $this->addFlash('error', 'Le formulaire contient des erreurs');
-//            }
-//        }
-//
-//        return $this->render(
-//            'security/register.html.twig',
-//            [
-//                'form' => $form->createView()
-//            ]
-//        );
-//    }
+    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder)
+    {
+        $user = new User();
+        $form = $this->createForm(InscriptionType::class, $user);
+        $form->handleRequest($request);
+
+
+        if($form->isSubmitted()) {
+            if ($form->isValid()) {
+
+                /**
+                 * @var UploadedFile|null
+                 */
+                $image = $user->getProfilImg();
+
+                if(!is_null($image)) {
+
+                    $filename = uniqid() . '.' . $image->guessExtension();
+
+                    $image->move(
+                        $this->getParameter('upload_dir'),
+                        $filename
+                    );
+
+                    $user->setProfilImg($filename);
+                }
+
+                $password = $passwordEncoder->encodePassword(
+                    $user,
+                    $user->getPlainPassword()
+                );
+                $user->setPassword($password);
+                dump($user);
+
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($user);
+                $em->flush();
+
+                $this->addFlash('succes', 'Votre compte est crée');
+                return $this->redirectToRoute('app_index_index');
+
+            } else {
+                $this->addFlash('error', 'Le formulaire contient des erreurs');
+            }
+        }
+
+        return $this->render(
+            'security/register.html.twig',
+            [
+                'form' => $form->createView()
+            ]
+        );
+    }
 
 
     /*
@@ -133,18 +134,11 @@ class SecurityController extends Controller
     }
 
     /**
-     * @Route("/loginr")
+     * @Route("/loginr", name="loginr")
      */
-    public function loginr(Request $request, AuthenticationUtils $authenticationUtils) {
+    public function loginr(Request $request) {
 
-
-            dump($request);
-            $error = $authenticationUtils->getLastAuthenticationError();
-
-            $lastUsername = $authenticationUtils->getLastUsername();
-            dump($lastUsername);
-            dump($error);
-        die();
+        return new Response('OK');
     }
 
 }

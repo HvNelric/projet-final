@@ -6,7 +6,7 @@ class User extends Component {
 
     state = {
         formData:{
-            email:{
+            username:{
                 element:'input',
                 value:'',
                 label:true,
@@ -103,11 +103,12 @@ class User extends Component {
                 "Content-Type": "application/json"}
             })
             // axios({
-            //     method: 'post',
             //     url: 'http://localhost:8000/test',
-            //     data: {
-            //       firstName: 'Fred',
-            //       lastName: 'Flintstone'
+            //     method: 'POST',
+            //     contentType: 'application/json',
+            //     auth: {
+            //         username: 'hvn@gmail.com',
+            //         password: 'az'
             //     },
             //     headers: {
             //         "Content-Type": "application/json"}
@@ -125,8 +126,6 @@ class User extends Component {
         //     }).catch( e =>{
         //         console.log(e)
         //     })
-        
-    
     }
 
     render(){

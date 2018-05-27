@@ -16,6 +16,7 @@ use App\Form\InscriptionType;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -35,7 +36,11 @@ class ProfilController extends Controller
     {
         $userLogged = $this->getUser();
 
-        $userId = $userLogged->getId();
+        $json = json_encode($userLogged);
+
+        return new Response('ok');
+
+
 
         /*$em = $this->getDoctrine()->getManager()->getRepository(User::class);
         $qb = $em->createQueryBuilder('u')
@@ -332,6 +337,27 @@ dump($user);
         );
 
         return $this->redirectToRoute('app_index_index');
+    }
+
+    /**
+     * @Route("/activites")
+     */
+    public function menuActivities()
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository(Activites::class);
+        $activities = $repo->findAll();
+
+        $json = [];
+        foreach($activities as $activity) {
+            $activity_tab = [
+                'region' => $activity->getName()
+            ];
+            $json[] = $activity_tab;
+        }
+
+        return new JsonResponse($json);
     }
 
 }

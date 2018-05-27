@@ -2,9 +2,12 @@
 
 namespace App\Controller;
 
+use App\Entity\Region;
 use App\Entity\Sejour;
+use App\Entity\User;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -25,10 +28,11 @@ class SejourController extends Controller
         $repository = $em->getRepository(Sejour::class);
         $sejours = $repository->findAll();
 
-        dump($sejours);
+        if($this->isGranted('ROLE_ADMIN')) {
+            return new Response('ADMIN');
+        }
 
         $json = [];
-
         foreach( $sejours as $sejour) {
             $sejour_tab = [
                 'ville' => $sejour->getVille(),
@@ -81,6 +85,52 @@ class SejourController extends Controller
 //                'sejour' => $sejour
 //            ]
 //        );
+    }
 
+    /**
+     * @Route("/regions")
+     */
+    public function menuRegions()
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository(Region::class);
+        $regions = $repo->findAll();
+
+        $json = [];
+        foreach($regions as $region) {
+           $region_tab = [
+               'region' => $region->getRegion()
+           ];
+           $json[] = $region_tab;
+        }
+
+        return new JsonResponse($json);
+    }
+
+    /**
+     * @Route("/sejour-par-region/{id}")
+     */
+    public function sejoursByRegion($id)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $regions = $em->getRepository(Region::class)->find($id);
+
+        $data = $regions->toArray();
+        dump($data);
+
+
+
+
+        return $this->render(
+            'sejour/index.html.twig',
+            [
+                'regions' => $regions
+            ]
+        );
     }
 }
+
+
+

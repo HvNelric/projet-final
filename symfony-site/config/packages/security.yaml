@@ -25,19 +25,26 @@ security:
             # https://symfony.com/doc/current/security/form_login_setup.html
             provider: db
             pattern: ^/
+            http_basic: ~
             form_login:
-                login_path: app_security_loginr
+                login_path: app_security_login
                 check_path: app_security_login
                 default_target_path: app_index_index
             logout:
                 path: app_security_logout
                 target: app_index_index
             json_login:
-                check_path: app_security_loginr
-
-
+                check_path: loginr
                 # username_path: security.credentials.login
                 # password_path: security.credentials.password
+            remember_me:
+                secret:   '%kernel.secret%'
+                lifetime: 604800 # 1 week in seconds
+                path:     /
+                # by default, the feature is enabled by checking a
+                # checkbox in the login form (see below), uncomment the
+                # following line to always enable it.
+                always_remember_me: true
 
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used

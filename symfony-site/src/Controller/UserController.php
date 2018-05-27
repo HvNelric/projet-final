@@ -21,12 +21,9 @@ class UserController extends Controller
      */
     public function index()
     {
-
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository(User::class);
         $users = $repository->findAll();
-
-
 
         $json = [];
         foreach( $users as $user) {
@@ -38,7 +35,6 @@ class UserController extends Controller
             ];
             $json[] = $user_tab;
         }
-
         return new JsonResponse($json);
 
 
@@ -56,9 +52,9 @@ class UserController extends Controller
 //
 //        dump($jsonContent);
 
-//        return $this->render('user/index.html.twig', [
-//
-//        ]);
+       // return $this->render('user/index.html.twig', [
+
+        //]);
     }
 
     /**
@@ -69,18 +65,19 @@ class UserController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository(User::class);
-        $user = $repository->findAll();
+        $user = $repository->find($id);
 
         $json = [
             'id' => $user->getId(),
             'nom' => $user->getNom(),
             'prenom' => $user->getPrenom(),
-            'age' => $user->getAge()
+            'age' => $user->getAge(),
+            'image' => $user->getProfilImg(),
+            'dispo_d' => $user->getDateDispo(),
+            'dispo_f' => $user->getDateFin()
         ];
 
-        dump($json);
         return new JsonResponse($json);
-
     }
 
     /**
@@ -101,19 +98,4 @@ class UserController extends Controller
         return new JsonResponse($json);
     }
 
-    /**
-     * @Route("/test")
-     */
-    public function test(Request $request)
-    {
-
-        $postJson = json_decode($request->getContent());
-
-        $json = [
-            'email' => $postJson->email,
-            'pwd' => $postJson->password
-        ];
-
-        return $postJson;
-    }
 }
