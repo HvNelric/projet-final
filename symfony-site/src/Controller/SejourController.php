@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Region;
 use App\Entity\Sejour;
+use App\Entity\User;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -87,16 +88,49 @@ class SejourController extends Controller
     }
 
     /**
-     * @Route("/par-region")
+     * @Route("/regions")
      */
-    public function SejourByRegion()
+    public function menuRegions()
     {
 
         $em = $this->getDoctrine()->getManager();
         $repo = $em->getRepository(Region::class);
-        $sejours = $repo->findAll();
+        $regions = $repo->findAll();
 
-        dump($sejours);
+        $json = [];
+        foreach($regions as $region) {
+           $region_tab = [
+               'region' => $region->getRegion()
+           ];
+           $json[] = $region_tab;
+        }
 
+        return new JsonResponse($json);
+    }
+
+    /**
+     * @Route("/sejour-par-region/{id}")
+     */
+    public function sejoursByRegion($id)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $regions = $em->getRepository(Region::class)->find($id);
+
+        $data = $regions->toArray();
+        dump($data);
+
+
+
+
+        return $this->render(
+            'sejour/index.html.twig',
+            [
+                'regions' => $regions
+            ]
+        );
     }
 }
+
+
+

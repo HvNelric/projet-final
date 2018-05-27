@@ -4,20 +4,14 @@
 
     <div class="container">
         <div class="row mt-5">
-            {% for sejour in sejours %}
-                <div class="col-6 col-md-4">
-                    <div class="card my-card">
-                        <img class="card-img-top" src="{{ asset('sejour-img/' ~ sejour.villeImg) }}" alt="destination" />
-                        <div class="card-body clearfix">
-                            <h5 class="card-title">{{ sejour.ville }}</h5>
-                            <p class="card-text">{{ sejour.description }}</p>
-                            <a href="{{ path('app_sejour_details', {id: sejour.id}) }}" class="btn btn-info float-right my-btn">
-                                + détails
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            {% for region in regions.sejourRegion %}
+                <ul>
+                    <li>
+                        {{ region.ville }}
+                    </li>
+                </ul>
             {% endfor %}
+            {{ dump(regions) }}
         </div>
     </div>
 

@@ -16,6 +16,7 @@ use App\Form\InscriptionType;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -35,7 +36,11 @@ class ProfilController extends Controller
     {
         $userLogged = $this->getUser();
 
-        $userId = $userLogged->getId();
+        $json = json_encode($userLogged);
+
+        return new Response('ok');
+
+
 
         /*$em = $this->getDoctrine()->getManager()->getRepository(User::class);
         $qb = $em->createQueryBuilder('u')

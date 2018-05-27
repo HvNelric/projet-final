@@ -65,7 +65,7 @@ class UserController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository(User::class);
-        $user = $repository->findAll();
+        $user = $repository->find($id);
 
         $json = [
             'id' => $user->getId(),
@@ -74,9 +74,7 @@ class UserController extends Controller
             'age' => $user->getAge()
         ];
 
-        dump($json);
         return new JsonResponse($json);
-
     }
 
     /**
@@ -97,19 +95,4 @@ class UserController extends Controller
         return new JsonResponse($json);
     }
 
-    /**
-     * @Route("/test")
-     */
-    public function test(Request $request)
-    {
-
-        $postJson = json_decode($request->getContent());
-
-        $json = [
-            'email' => $postJson->email,
-            'pwd' => $postJson->password
-        ];
-
-        return $postJson;
-    }
 }
