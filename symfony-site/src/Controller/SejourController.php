@@ -100,7 +100,8 @@ class SejourController extends Controller
         $json = [];
         foreach($regions as $region) {
            $region_tab = [
-               'region' => $region->getRegion()
+               'region' => $region->getRegion(),
+               'id' => $region->getId()
            ];
            $json[] = $region_tab;
         }
