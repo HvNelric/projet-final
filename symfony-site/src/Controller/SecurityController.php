@@ -133,6 +133,7 @@ class SecurityController extends Controller
         );
     }
 
+
     /**
      * @Route("/loginr", name="loginr")
      */

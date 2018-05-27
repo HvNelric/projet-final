@@ -44,7 +44,8 @@ class SejourController extends Controller
                 'transport' => $sejour->getTransport(),
                 'duree' => $sejour->getDuree(),
                 'activite' =>$sejour->getActivitesSejour(),
-                'region'=> $sejour->getRegionSejour()
+                'region'=> $sejour->getRegionSejour(),
+                'id' => $sejour->getId()
             ];
             $json[] = $sejour_tab;
         }
@@ -61,8 +62,7 @@ class SejourController extends Controller
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository(Sejour::class, $id);
         $sejour = $repository->find($id);
-
-        dump($sejour);
+        
 
         $json = [
             'ville' => $sejour->getVille(),
@@ -117,9 +117,6 @@ class SejourController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $regions = $em->getRepository(Region::class)->find($id);
-
-        $data = $regions->toArray();
-        dump($data);
 
 
 

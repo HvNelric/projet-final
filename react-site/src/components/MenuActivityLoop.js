@@ -8,8 +8,8 @@ const MenuActivityLoop = (props) => {
         props.activities.map((item, index)=>{
             return (
 
-                <Link className="dropdown-item" to={`./sejour-par-region/${item.id}`} key={index}>{item.region}</Link>
-                
+                <Link className="dropdown-item" to={`./sejour-par-region/${item.id}`} key={index}>{item.activity}</Link>
+
             )
         }))
 }
