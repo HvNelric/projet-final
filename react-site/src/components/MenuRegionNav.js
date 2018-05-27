@@ -22,7 +22,9 @@ class MenuRegionNav extends Component {
         return(
 
             this.state.regions.length ?
+            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <MenuRegionLoop regions={this.state.regions} />
+            </div>
                 :<div>Hello</div>)
     }
 }

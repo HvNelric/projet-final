@@ -2,14 +2,12 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const MenuRegionLoop = (props) => {
-    console.log('prop', props.profils)
+    console.log('propregion', props)
     return (
-        props.profils.map((item, index) => {
+        props.regions.map((item, index) => {
             return (
 
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown" key={index}>
-                    <Link className="dropdown-item" to={`./sejour-par-region/${item.id}`}>{item.region}</Link>
-                </div>
+                    <Link className="dropdown-item" to={`./sejour-par-region/${item.id}`} key={index}>{item.region}</Link>
 
             )
         }))

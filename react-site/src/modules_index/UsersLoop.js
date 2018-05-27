@@ -12,7 +12,7 @@ const UsersLoop = (props) => {
                     <div className="user-container d-flex justify-content-start"> {/** User-container **/}
                         <Link to={`./user/${item.id}`}>
                             <div className="user-img">
-                                <img src={`http://localhost:8000/profil-img/${item.image}`} alt="image du profil"></img>
+                                <img src={`http://localhost:8000/profil-img/${item.image}`}></img>
                             </div>
                         </Link>
                         <div className="user-content">
