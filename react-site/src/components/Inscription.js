@@ -1,218 +1,286 @@
 import React, { Component } from 'react';
-import FormFields from './formFields';
 import axios from 'axios';
 
-class User extends Component {
+class Inscription extends Component {
 
     state = {
-        formData:{
-            activity:{
-                element:'input',
-                value:'',
-                label:true,
-                labelText:'Email',
-                config:{
-                    name:'activity',
-                    type:'text',
-                    placeholder:''
-                },
-                validation:{
-                    required:true,
-                    minLen:2
-                },
-                valid:false,
-                touched:false,
-                validationMessage:'Vous devez entrer une adresse mail valide'
-            },
-            // password:{
-            //     element:'input',
-            //     value:'',
-            //     label:true,
-            //     labelText:'Mot de passe',
-            //     config:{
-            //         name:'_password',
-            //         type:'password',
-            //         placeholder:'Entrer votre mot de passe'
-            //     },
-            //     validation:{
-            //         required:true
-            //     },
-            //     valid:false,
-            //     touched:false,
-            //     validationMessage:''
-            // },
-            // message:{
-            //     element:'textarea',
-            //     value:'',
-            //     label:true,
-            //     labelText:'Message',
-            //     config:{
-            //         name:'message_input',
-            //         rows:4,
-            //         cols:36
-            //     },
-            //     validation:{
-            //         required:false
-            //     },
-            //     valid:true
-            // },
-            // age:{
-            //     element:'select',
-            //     value:'',
-            //     label:true,
-            //     labelText:'Age',
-            //     config:{
-            //         name:'age_input',
-            //         options:[
-            //             {val:'1',text:'10-20'},
-            //             {val:'2',text:'20-30'},
-            //             {val:'3',text:'+30'}
-            //         ]
-            //     },
-            //     validation:{
-            //         required:false
-            //     },
-            //     valid:true
-            //}
-        }
+        files:'',
+        firstname:'',
+        lastname:'',
+        email:'',
+        password:'',
+        sex:'f',
+        age:'',
+        date_de_debut:'',
+        date_de_fin:'',
+        activitySelected:[],
+        regionSelected:[],
+        activities:[],
+        regions:[]
     }
 
-    updateForm = (newState) => {
+    handleFileChange = (event) => {
+        let files = event.target.files || event.dataTransfer.files;
+            if (!files.length) {
+                console.log('no files');
+            }
+            console.log(files);
+            console.log(files[0])
+            this.setState({
+                files:event.target.files[0]
+            })
+        }
+    
+
+
+
+    handleFirstNameChange = (event) => {
         this.setState({
-            formData:newState
+            firstname:event.target.value
         })
     }
 
-    submitForm = (event) => {
-        event.preventDefault();
-        let dataToSubmit = {};
-        let formIsValid = true;
-
-        for(let key in this.state.formData){
-            dataToSubmit[key] = this.state.formData[key].value;
-        }
-
-        for(let key in this.state.formData){
-            formIsValid = this.state.formData[key].valid && formIsValid;
-        }
-
-        if(formIsValid){
-            console.log('data',dataToSubmit)
-            axios.post('http://localhost:8000/test', dataToSubmit,
-                {headers: {
-                        "Content-Type": "application/json"}
-                })
-            // axios({
-            //     method: 'post',
-            //     url: 'http://localhost:8000/test',
-            //     data: {
-            //       firstName: 'Fred',
-            //       lastName: 'Flintstone'
-            //     },
-            //     headers: {
-            //         "Content-Type": "application/json"}
-            //     }
-            //   )
-                .then(function (response) {
-                    console.log('reponse',response);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-        }
-        // firebaseDB.ref('users').push(dataToSubmit)
-        // .then(()=>{
-        //     }).catch( e =>{
-        //         console.log(e)
-        //     })
-
-
+    handleLastNameChange = (event) => {
+        this.setState({
+            lastname:event.target.value
+        })
     }
 
+    handleEmailChange= (event) => {
+        this.setState({
+            email:event.target.value
+        })
+    }
+
+    handlePasswordChange = (event) =>{
+        this.setState({
+            password:event.target.value
+        })
+    }
+
+    handleSexChange = (event) =>{
+        this.setState({
+            sex:event.target.value
+        })
+    }
+
+    handleAgeChange = (event) =>{
+        this.setState({
+            age:event.target.value
+        })
+    }
+
+    handleDate_de_debutChange = (event) =>{
+        this.setState({
+            date_de_debut:event.target.value
+        })
+    }
+
+    handleDate_de_finChange = (event) =>{
+        this.setState({
+            date_de_fin:event.target.value
+        })
+    }
+
+    handleActivityChange = (event) =>{
+        event.target.checked?
+        this.setState({activitySelected:[...this.state.activitySelected,event.target.value]})
+        :
+        this.setState({
+            activitySelected: this.state.activitySelected.filter((_, i) => i !== this.state.activitySelected.indexOf(event.target.value))
+          });
+    }
+        
+
+    handleRegionChange = (event) =>{
+        event.target.checked?
+        this.setState({regionSelected:[...this.state.regionSelected,event.target.value]})
+        :
+        this.setState({
+            regionSelected: this.state.regionSelected.filter((_, i) => i !== this.state.regionSelected.indexOf(event.target.value))
+          });
+    }
+        
+
+
+
+    onshandler = (event) =>{
+        event.preventDefault();
+
+        console.log(this.state)
+
+        axios.post('http://localhost:8000/registerr', this.state, { 
+                headers: {
+                    "Content-Type": "application/json"
+                }
+        }
+    );
+            onUploadProgress: progressEvent => {
+              console.log(progressEvent.loaded / progressEvent.total);
+            }
+    })
+    }
+
+    componentWillMount(){
+        axios.get(`http://localhost:8000/profil/activites`)
+            .then( response => {
+                console.log('act', response.data)
+                this.setState({
+                    activities:response.data
+                })
+            })
+        axios.get(`http://localhost:8000/sejour/regions`)
+        .then( response => {
+            this.setState({
+                regions:response.data
+            })
+        })
+    }
+
+        
     render(){
         return(
-            <div className="container">
-                <form onSubmit={this.submitForm}>
+            this.state.regions.length && this.state.activities.length?
 
-                    <FormFields
-                        formData={this.state.formData}
-                        onblur={(newState) => this.updateForm(newState)}
-                        change={(newState) => this.updateForm(newState)}
-                    />
+                <div className="container">
+                    <h1 className="mt-5">Inscription</h1>
+                    <div className="container py-5">
+                    <form onSubmit={this.onshandler}>
+                    <div className="form-control p-5">
+                        <div className="form-group">
+                            <div>
+                                <label htmlFor="inscription_profil_img">Photo de profil</label>
+                                <input type="file" id="inscription_profil_img" name="image"
+                                onChange={this.handleFileChange}
+                                value={this.state.file}/>
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <div>
+                            <label htmlFor="inscription_email">Email</label>
+                            <input 
+                                type="email"
+                                id="inscription_email"
+                                name="email"
+                                required="required"
+                                className="form-control"
+                                onChange={this.handleEmailChange}
+                                value={this.state.email}
+                            />
+                            </div>
+                        </div>
 
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+                        <div className="form_group">
+                            <div>
+                                <label htmlFor="inscription_plainPassword_first" className="required">Mot de passe</label>
+                                <input 
+                                    type="password"
+                                    id="inscription_plainPassword_first"
+                                    name="password"
+                                    required="required"
+                                    className="form-control"
+                                    onChange={this.handlePasswordChange}
+                                    value={this.state.password}
+                                />
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="inscription_prenom" className="required">Prénom</label>
+                            <input 
+                                type="text"
+                                id="inscription_prenom"
+                                name="prenom"
+                                required="required"
+                                className="form-control"
+                                onChange={this.handleFirstNameChange}
+                                value={this.state.firstname}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="inscription_nom" className="required">Nom</label>
+                            <input 
+                                type="text"
+                                id="inscription_nom"
+                                name="nom"
+                                required="required"
+                                className="form-control"
+                                onChange={this.handleLastNameChange}
+                                value={this.state.lastname}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <div>
+                                <label htmlFor="inscription_sexe" className="required">Sexe</label>
+                                <select id="inscription_sexe" name="sexe" className="form-control" value={this.state.sex} onChange={this.handleSexChange}>
+                                <option value="femme">Femme</option>
+                                <option value="homme">Homme</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <div>
+                                <label htmlFor="inscription_age" className="required">Age</label>
+                                <input type="number" id="inscription_age" name="age" required="required" className="form-control"
+                                onChange={this.handleAgeChange}
+                                value={this.state.age}
+                                />
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <div>
+                                <label htmlFor="inscription_date_dispo" className="required">Date de début</label>
+                                <input type="date" id="inscription_date_dispo" name="date_dispo" required="required" className="form-control"
+                                 onChange={this.handleDate_de_debutChange}
+                                 value={this.state.date_de_debut}/>
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <div>
+                                <label htmlFor="inscription_date_fin" className="required">Date de fin</label>
+                                <input type="date" id="inscription_date_fin" name="date_fin" required="required" className="form-control"                                 onChange={this.handleDate_de_finChange}
+                                 value={this.state.date_de_fin}/>
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <div>
+                                <label>Activités</label>
+                                <div className="form-control">
+                                {this.state.activities.map((item,i)=>(
+                                    <div key={i} id="inscription_activites" >
+                                    <input type="checkbox" name={item.val} value={item.activity} onChange={this.handleActivityChange}/>
+                                    <label htmlFor={item.activity}>{item.activity}</label>&nbsp;&nbsp;
+                                    </div>))
+                                }
+                                </div>
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <div>
+                            <label>Régions</label>
+                            <div className="form-control">
+                                {this.state.regions.map((item,i)=>(
+                                    <div key={i} id="inscription_region"> 
+                                    <input type="checkbox" name={item.val} value={item.region} onChange={this.handleRegionChange}
+                                    />
+                                    <label htmlFor={item.region}>{item.region}</label>&nbsp;&nbsp;
+                                    </div>))
+                                }
+                                </div>
+                            </div>
+                        </div>
+                        <div className="form-btn-group text-right">
+                            <button type="submit" className="btn btn-info mt-4">
+                            Enregistrer
+                        </button>
+                    </div>
+                   </div>
+                    </form>
+                
+                    </div>
+                </div>
+                :null
         )
     }
 }
 
-export default User;
-
-
-
-
-
-// import React from 'react';
-//
-// const Inscription = () => {
-//     return (
-//         <div class="container-fluid p-0 inscription-container">
-//         <div class="container">
-//             <div class="row">
-//                 <div class="col-12">
-                    {/*<form method="post" class="inscription-form p-5 m-0">*/}
-                        {/*<div class="form-group">*/}
-                            {/*<label>Email</label>*/}
-                            {/*<input type="email" class="form-control" name="email" value=""/>*/}
-                        {/*</div>*/}
-                        {/*<div class="form-group">*/}
-                            {/*<label>Mot de passe</label>*/}
-                            {/*<input type="password" class="form-control" name="pwd" value=""/>*/}
-                        {/*</div>*/}
-                        {/*<div class="form-group">*/}
-                            {/*<label>Civilité</label>*/}
-                            {/*<select class="form-control" name="civilite">*/}
-                                {/*<option>Mme</option>*/}
-                                {/*<option>M</option>*/}
-                            {/*</select>*/}
-                        {/*</div>*/}
-                        {/*<div class="form-group">*/}
-                            {/*<label>Prénom</label>*/}
-                            {/*<input type="text" class="form-control" name="prenom" value=""/>*/}
-                        {/*</div>*/}
-                        {/*<div class="form-group">*/}
-                            {/*<label>Nom</label>*/}
-                            {/*<input type="text" class="form-control" name="nom" value=""/>*/}
-                        {/*</div>*/}
-                        {/*<div class="form-group">*/}
-                            {/*<label>Adresse</label>*/}
-                            {/*<input type="text" class="form-control" name="adresse" value=""/>*/}
-                        {/*</div>*/}
-                        {/*<div class="form-group">*/}
-                            {/*<label>Code postal</label>*/}
-                            {/*<input type="text" class="form-control" name="cp" value=""/>*/}
-                        {/*</div>*/}
-                        {/*<div class="form-group">*/}
-                            {/*<label>Ville</label>*/}
-                            {/*<input type="text" class="form-control" name="ville" value=""/>*/}
-                        {/*</div>*/}
-                        {/*<div class="form-group">*/}
-                            {/*<label>Date de naissance</label>*/}
-                            {/*<input type="text" class="form-control" name="date" value=""/>*/}
-                        {/*</div>*/}
-                        {/*<div class="form-group">*/}
-                            {/*<label>Téléphone</label>*/}
-                            {/*<input type="text" class="form-control" name="nom" value=""/>*/}
-                        {/*</div>*/}
-                        {/*<button type="submit" class="btn btn-dark">Submit</button>*/}
-                    {/*</form>*/}
-
-//                 </div>
-//             </div>
-//         </div>
-//     </div>
-//     );
-// };
-//
-// export default Inscription;
+export default Inscription;

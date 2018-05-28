@@ -7,7 +7,7 @@ const SejoursLoop = (props) => {
         props.sejours.map((item, index) => {
             return (
 
-                <div className="col-6">
+                <div className="col-6" key={index}>
                     <div className="group-container"> {/* Group-container */}
                         <div className="group-arrow-container">
                             <div className="group-arrow">

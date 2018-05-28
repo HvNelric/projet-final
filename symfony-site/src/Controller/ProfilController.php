@@ -352,7 +352,8 @@ dump($user);
         $json = [];
         foreach($activities as $activity) {
             $activity_tab = [
-                'region' => $activity->getName()
+                'activity' => $activity->getName(),
+                'id' => $activity->getId()
             ];
             $json[] = $activity_tab;
         }

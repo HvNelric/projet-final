@@ -10,12 +10,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Utilisateur
- * ApiResource(
- *     attributes={
- *     "filters"={"offer.date_filter"}
- *     }
- * )
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  * @UniqueEntity(fields="email", message="Il existe déjà un utilisateur avec cet email")
  */
@@ -53,9 +47,10 @@ class User implements UserInterface, \Serializable
 
     /**
      *
-     * @ORM\Column(type="string", length=255, unique=true)
+     * @ORM\Column(type="string", unique=true, length=255, nullable=false)
      * @Assert\NotBlank(message="L'email est obligatoire", groups={"inscription"})
      * @Assert\Email(message="Cet email n'est pas valide")
+     *
      */
     private $email;
 
@@ -126,7 +121,7 @@ class User implements UserInterface, \Serializable
     /**
      *
      * @var string
-     * @ORM\Column(type="string", nullable=true)
+     * @ORM\Column(type="string", nullable=false)
      * Assert\Image(
      *     minWidth = 200,
      *     maxWidth = 400,

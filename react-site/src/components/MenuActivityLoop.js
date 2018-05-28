@@ -3,14 +3,12 @@ import {Link} from 'react-router-dom';
 
 
 const MenuActivityLoop = (props) => {
-    console.log('prop',props.profils)
+    console.log('prop',props)
     return (
-        props.profils.map((item, index)=>{
+        props.activities.map((item, index)=>{
             return (
 
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown" key={index}>
-                    <Link className="dropdown-item" to={`./sejour-par-region/${item.id}`}>{item.region}</Link>
-                </div>
+                <Link className="dropdown-item" to={`./sejour-par-region/${item.id}`} key={index}>{item.activity}</Link>
 
             )
         }))

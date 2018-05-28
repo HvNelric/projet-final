@@ -22,7 +22,9 @@ class MenuActivityNav extends Component {
         return(
 
             this.state.activities.length ?
-                <MenuActivityLoop regions={this.state.activities} />
+            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <MenuActivityLoop activities={this.state.activities} />
+            </div>
                 :<div>Hello</div>)
     }
 }
