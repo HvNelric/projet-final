@@ -47,7 +47,11 @@ class User implements UserInterface, \Serializable
 
     /**
      *
+<<<<<<< HEAD
      * @ORM\Column(type="string", unique=true, length=255, nullable=false)
+=======
+     * @ORM\Column(type="string", length=255, unique=true, nullable=false)
+>>>>>>> db36e8a5e7ca87d05734325f15442eb0633c8830
      * @Assert\NotBlank(message="L'email est obligatoire", groups={"inscription"})
      * @Assert\Email(message="Cet email n'est pas valide")
      *

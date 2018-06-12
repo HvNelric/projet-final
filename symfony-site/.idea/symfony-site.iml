@@ -108,5 +108,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="react-site" />
+    <orderEntry type="module" module-name="tuto" />
   </component>
 </module>

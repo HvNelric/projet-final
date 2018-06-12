@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../react-site/.idea/react-site.iml" filepath="$PROJECT_DIR$/../react-site/.idea/react-site.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/symfony-site.iml" filepath="$PROJECT_DIR$/.idea/symfony-site.iml" />
+      <module fileurl="file://D:/Angular/tuto/.idea/tuto.iml" filepath="D:/Angular/tuto/.idea/tuto.iml" />
     </modules>
   </component>
 </project>

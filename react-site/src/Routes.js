@@ -9,6 +9,8 @@ import Sejours from './components/Sejours';
 import User from './components/User';
 import Inscription from './components/Inscription';
 import Connexion from './components/Connexion';
+import SejourParRegionArticle from './components/SejourParRegionArticle';
+import ActivityArticle from './components/ActivityArticle';
 
 
 class App extends Component {
@@ -19,11 +21,12 @@ class App extends Component {
               <NavbarMod />
               <Switch>
                 <Route path="/" exact component={ModulesIndex} />
+                <Route path="/sejour-par-region/:id" exact component={SejourParRegionArticle}/>
+                <Route path="/activites/:id" exact component={ActivityArticle}/>
                 <Route path="/sejour" exact component={Sejours} />
                 <Route path="/user" exact component={User} />
                 <Route path="/Inscription" exact component={Inscription} />
                 <Route path="/Connexion" exact component={Connexion} />
-                {/* <PrivateRoute isLogged={props.auth} path="/dashboard" exact component={Dashboard} /> */}
             </Switch>
         </div>
     );
